@@ -6,26 +6,44 @@ html{
     color:#bcb8fe;
     background-image: linear-gradient(#1a0e3e, #000000);
     background-attachment: fixed;
+    margin: 20px 10px 20px 10px
 }
 
 .header{
-    margin: 8% auto;
+    margin: 20px auto;
     padding: 4%;
-    max-width: 80%;
+    max-width: 60%;
     background:#2c1a4b;
     box-shadow:0 5px 10px rgba(16, 0, 53, 0.2),0 15px 40px rgba(0,0,0,.05)
 }
 
 .bodybg{
-    margin: 8% auto;
+    margin: 20px auto;
     padding: 4%;
-    max-width: 80%;
+    max-width: 60%;
     background:#2c1a4b;
     box-shadow:0 5px 10px rgba(16, 0, 53, 0.2),0 15px 40px rgba(0,0,0,.05)
 }
 
 .navi{
+    margin: 20px auto;
+    text-align: center;
     color: #ffffff;
+    min-width: 20%
+}
+
+.button{
+    width: 132px;
+    height: 46.5px;
+    padding: 1%
+}
+
+.pfp{
+
+}
+
+.pfptext{
+    text-align: center;
 }
 
 a{

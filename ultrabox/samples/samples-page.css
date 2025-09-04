@@ -1,33 +1,35 @@
 @charset "UTF-8";
 
-html{
-    font-family:'Ubuntu', 'Calibri', sans-serif;
+html {
+    font-family: 'Ubuntu', 'Calibri', sans-serif;
     text-align: center;
-    color:#ffffff;
-    background-image: linear-gradient(#272331, #000000);
+    color: #ffffff;
+    background: #16131b;
+    background-image: url('bg.svg');
     background-attachment: fixed;
-    scrollbar-color: #49495f #272331; 
+    background-position: center;
+    scrollbar-color: #49495f #272331;
 }
 
-h1{
-    background:#49495f;
+h1 {
+    background: #49495f;
     padding: 20px 10px 20px 10px;
     border: none;
     border-radius: 10px;
 }
 
-.texttext{
+.texttext {
     margin: 1% auto;
     padding: 2%;
     max-width: 70%;
 }
 
-audio{
+audio {
     margin-bottom: 20px auto;
 }
 
 
-h2{
+h2 {
     padding: 20px 10px 20px 10px;
     border: none;
     border-radius: 10px;
@@ -36,7 +38,7 @@ h2{
     max-width: 70%;
 }
 
-.texttext .whitespacething{
+.texttext .whitespacething {
     white-space: pre-line;
 }
 
@@ -45,7 +47,7 @@ h2{
     margin: 0;
     padding: 0;
     width: 250px;
-    background-image: linear-gradient(#272331, #000000);
+    background: #16131b;
     background-attachment: fixed;
     position: fixed;
     height: 97%;
@@ -55,14 +57,16 @@ h2{
     border-style: solid;
     border-radius: 10px;
 }
+
 .sidebar h3 {
-    background:#49495f;
+    background: #49495f;
     padding: 4%;
     margin: 2%;
     margin-bottom: 12px;
     border: none;
     border-radius: 10px;
 }
+
 .sidebar a {
     display: block;
     color: #a3a3a3;
@@ -71,24 +75,29 @@ h2{
     border-radius: 10px;
     margin: 2%;
 }
+
 .sidebar a.workinprogress {
     margin: 2%;
     color: #444444;
     text-decoration: line-through;
 }
-.sidebar a.workinprogress:hover:not(.active){
+
+.sidebar a.workinprogress:hover:not(.active) {
     background: #ff000000;
     color: #ffffff;
 }
+
 .sidebar a.active {
     margin: 2%;
     background: #49495f;
     color: #ffffff;
     border-radius: 10px;
 }
-.sidebar a.active:hover{
+
+.sidebar a.active:hover {
     background-color: #5c5ca3
 }
+
 .sidebar a:hover:not(.active) {
     margin: 2%;
     background-color: #49495f8d;
@@ -110,9 +119,16 @@ div.content {
         font-size: small;
         margin-bottom: 10px;
     }
-    .sidebar a {float: left;}
-    div.content {margin-left: 0;}
-  }
+
+    .sidebar a {
+        float: left;
+    }
+
+    div.content {
+        margin-left: 0;
+    }
+}
+
 @media screen and (max-width: 400px) {
     .sidebar a {
         text-align: center;
@@ -122,8 +138,8 @@ div.content {
 
 
 /* ZE NAVI!!!!!!!!!!!!!!!!!! */
-.buttonnavi{
-    font-family:'Ubuntu', 'Calibri', sans-serif;
+.buttonnavi {
+    font-family: 'Ubuntu', 'Calibri', sans-serif;
     background-color: #49495f;
     padding: 5px 17px 5px 17px;
     color: #ffffff;
@@ -133,16 +149,19 @@ div.content {
     cursor: pointer;
     font-size: large;
 }
-.buttonnavi:hover{
+
+.buttonnavi:hover {
     background-color: #4c7cff;
 }
 
-.navilinks{
+.navilinks {
     color: #4c7cff;
 }
-.navilinks:hover{
+
+.navilinks:hover {
     color: #a6beff;
 }
+
 /* ZE NAVI!!!!!!!!!!!!!!!!!! */
 
 .pageButtons {
@@ -158,6 +177,7 @@ div.content {
     top: 0;
     margin: 1%;
 }
+
 .dropbtn {
     background-color: #49495f;
     color: white;
@@ -167,68 +187,87 @@ div.content {
     border-radius: 10px;
     cursor: pointer;
 }
-.dropbtn:hover, .dropbtn:focus {
-  background-color: #4c7cff;
+
+.dropbtn:hover,
+.dropbtn:focus {
+    background-color: #4c7cff;
 }
+
 .dropdown {
     position: relative;
     display: inline-block;
 }
+
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: #49495f;
     border-radius: 10px;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
+
 .dropdown-content a {
     color: rgb(255, 255, 255);
     padding: 12px 10px;
     text-decoration: none;
     display: block;
 }
-.dropdown-content a:hover {background-color: #737394;}
-.show {display:block;}
+
+.dropdown-content a:hover {
+    background-color: #737394;
+}
+
+.show {
+    display: block;
+}
+
 /* ps: thank you we3schools for free code youre my goat i love you no homo but id still kiss you sloppy style LMFAOO ASOFAS DHJAFSJVHGSCVAS */
 /* DROPDOWN THING */
 
 /* links */
-a{
+a {
     color: #4c7cff;
 }
-a:hover{
+
+a:hover {
     color: #a6beff;
 }
+
 /* links */
 
 
 
 /* text styles and stuff */
-.col{
+.col {
     color: #ff81d5;
 }
-.small{
+
+.small {
     color: #444444;
     font-size: small;
 }
-.link{
+
+.link {
     color: #afafaf;
     font-size: small;
 }
-.link:hover{
+
+.link:hover {
     color: #7d71ff;
     cursor: pointer;
 }
+
 /* text styles and stuff */
 
-/* i love you so much we3 schools */
+/* i love you so much w3 schools */
 .popup {
     position: relative;
     display: inline-block;
     cursor: pointer;
 }
+
 .popup .popuptext {
     visibility: hidden;
     width: 160px;
@@ -243,6 +282,7 @@ a:hover{
     left: 50%;
     margin-left: -80px;
 }
+
 .popup .popuptext::after {
     content: "";
     position: absolute;
@@ -253,6 +293,7 @@ a:hover{
     border-style: solid;
     border-color: #555 transparent transparent transparent;
 }
+
 .popup .show {
     visibility: visible;
     -webkit-animation: fadeIn 1s;
@@ -260,19 +301,31 @@ a:hover{
 }
 
 @-webkit-keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
+
 @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity:1 ;}
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
-/* i love you so much we3 schools */
+
+/* i love you so much w3 schools */
 
 
 
 /* column view */
-.stupidfuckingcontainer{
+.stupidfuckingcontainer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -280,38 +333,44 @@ a:hover{
     margin-left: 4%;
     margin-right: 4%;
 }
-.audiofile{
+
+.audiofile {
     display: flex;
     flex-direction: column;
     flex-basis: calc(50% - 10px);
     /* just so everyone here knows, i had to use some help for this. 
     i am not intelligent. do not mistake me as such */
 }
-.audiofile p{
+
+.audiofile p {
     padding: 20px;
     border: 4px solid #49495f;
+    background-color: #16131b;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     gap: 10px;
     word-break: break-word;
 }
+
 @media (max-width: 768px) {
-    .audiofile{
+    .audiofile {
         flex-basis: 100%;
     }
 }
+
 /* column view */
 
 /* category */
-.category{
+.category {
     display: flex;
     flex-direction: column;
     flex-basis: calc(50% - 10px);
     /* just so everyone here knows, i had to use some help for this. 
     i am not intelligent. do not mistake me as such */
 }
-.category a{
+
+.category a {
     padding: 20px;
     border: 4px solid #49495f;
     border-radius: 10px;
@@ -328,25 +387,46 @@ a:hover{
     cursor: pointer;
     text-decoration: none;
 }
-.category a:hover .small{
+
+.category a:hover .small {
     color: #afafaf;
 }
-.category .bigguy{
+
+.category .bigguy {
     font-size: x-large;
     color: #886644;
 }
-.category a:hover{
+
+.category a:hover {
     background-color: #49495f;
 }
-.category a:hover .bigguy{
+
+.category a:hover .bigguy {
     color: #de8226;
     font-weight: bold;
 }
+
 /* yea no i really tried to add the image background thing but im not experienced enough for it :/
 that and im too lazy to figure it out right now */
 @media (max-width: 768px) {
-    .category{
+    .category {
         flex-basis: 100%;
     }
 }
+
 /* category */
+
+
+/* audio */
+/*
+https://stackoverflow.com/questions/4126708/how-to-style-html5-audio-tag
+*/
+audio::-webkit-media-controls-enclosure {
+    border-radius: 10px;
+    width: 100%;
+    /* background-color: #49495f; */
+}
+audio {
+    width: 100%;
+}
+/* audio */

@@ -1,12 +1,16 @@
 @charset "UTF-8";
 
+/* BRUH WHY IS THIS FILE CALLED ULTRAKILL 🔫🔫🔫 */
+
 html{
     font-family:'Ubuntu', 'Calibri', sans-serif;
     text-align: center;
     color:#ffffff;
-    background-image: linear-gradient(#222222, #000000);
+    background: #0e0e0e;
+    background-image: url('bg.svg');
     background-attachment: fixed;
-    scrollbar-color: #a3a3a3 #444444;   
+    background-position: center;
+    scrollbar-color: #4b4b4b #262626;   
 }
 
 h1{
@@ -35,7 +39,7 @@ h2{
     margin: 0;
     padding: 0;
     width: 250px;
-    background-image: linear-gradient(#222222, #000000);
+    background: #0e0e0e;
     background-attachment: fixed;
     position: fixed;
     height: 97%;
@@ -148,6 +152,7 @@ div.content {
     border-radius: 10px;
     cursor: pointer;
     font-size: large;
+    min-height: 36px;
 }
 .buttonnavi:hover{
     background-color: #886644;
@@ -216,6 +221,7 @@ summary:hover{
     margin-right: 4%;
 }
 .category{
+    background-color: #0e0e0e;
     display: flex;
     flex-direction: column;
     flex-basis: calc(50% - 10px);

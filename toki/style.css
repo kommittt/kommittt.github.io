@@ -1,0 +1,131 @@
+html {
+    background: #000000;
+    font-family: 'Red Hat Text', sans-serif;
+    scrollbar-color: #333339 #19191c;
+}
+/* today i learned * in css means all elements
+i dont know if its different from using html? so im just going with the usual lmao */
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100%;
+
+    color: #333339;
+}
+
+header {
+    margin: 2%;
+    text-align: center;
+}
+
+h1 {
+    color: #ffffff;
+    font-size: xx-large;
+    margin-bottom: 10px;
+}
+
+.luna {
+    color: #b0b0b0;
+    font-size: normal;
+    margin-top: 10px;
+}
+
+
+
+main {
+    width: 100%;
+    max-width: 1000px;
+}
+
+.another-container {
+    display: flex;
+    margin-bottom: 30px;
+    overflow: hidden;
+    background-color: #19191c;
+
+    border: #333339;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+}
+
+#search-input {
+    flex: 1;
+    padding: 15px 20px;
+    outline: none;
+
+    color: #ffffff;
+    background-color: #19191c;
+    border: none;
+    font-size: 15px;
+}
+
+#search-button {
+    padding: 15px 25px;
+    cursor: pointer;
+
+    color: #ffffff;
+    background-color: #19191c;
+    border: none;
+    font-size: 15px;
+}
+#search-button:hover {
+    background: #333339;
+}
+
+.results-container {
+    margin-top: 10px;
+}
+
+.word-card {
+    background: #19191c;
+    padding: 20px;
+    margin-bottom: 10px;
+
+    border: #333339;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+}
+
+.wordtp {
+    margin-bottom: 5px;
+    font-size: x-large;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.definition {
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+.frequency {
+    padding-left: 10px;
+    background: #19191c;
+    color: #b0b0b0;
+}
+
+.extra {
+    margin-top: 10px;
+    padding: 10px;
+    font-style: italic;
+    color: #b0b0b0;
+}
+
+.results {
+    text-align: center;
+    font-size: normal;
+    color: #b0b0b0;
+}
+
+
+footer {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #b0b0b0;
+    font-size: small;
+}

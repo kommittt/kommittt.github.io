@@ -14,6 +14,7 @@ i dont know if its different from using html? so im just going with the usual lm
 .sitelen {
     font-family: "nishiki";
     font-style: normal;
+    font-weight: normal;
     color: white;
     padding-right: 5px;
 }
@@ -171,6 +172,7 @@ footer {
     font-size: small;
 }
 
+/*
 @media (max-width: 768px) {
     #search-button {
         min-width: 20px;
@@ -181,3 +183,7 @@ footer {
         font-size: small;
     }
 }
+
+gotta first figure out if my chrome is tweaking or its actually my site and im
+doing it some other day because im tired lmao
+*/

@@ -111,10 +111,10 @@ toggleView.addEventListener('click', viewmodeToggle);
 
 function viewmodeToggle() {
     if (viewActive === false) {
-        toggleView.innerHTML = '☰ list view'; 
+        toggleView.innerHTML = 'list view'; 
         viewActive = true;
     } else {
-        toggleView.innerHTML = '🀆 card view';
+        toggleView.innerHTML = 'card view';
         viewActive = false;
     }
 

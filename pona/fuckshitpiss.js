@@ -4,7 +4,7 @@
 const sheetLink = 'https://opensheet.elk.sh/1WV2Vb9Qy7BXLrzxspbCfBCwo9vZmoG-13MEbNoKRhbw/Sheet1'
 // search button stuff
 const searchInput = document.getElementById('search-input');
-const searchButton = document.getElementById('search-button');
+
 const toggleView = document.getElementById('viewmode');
 
 // this lowkey reminds me of python..
@@ -43,9 +43,9 @@ function startDigginInYoButtTwin() {
                 </div>
                 <span class="definition">${item.definition}</span>
                 <span class="extra">
-                    <details>
-                        <summary>ku translations:</summary>
-                        ${item.extra || 'nothing here!'}
+                    <details id="expand">
+                        <summary>ku data:</summary>
+                        ${item.extra || 'no ku data available!'}
                     </details>
                 </span>`;
             
@@ -68,6 +68,14 @@ function startDigginInYoButtTwin() {
                 'font-weight': 'bold',
                 'color': '#ffffff'
             });
+            $('.sitelen').removeAttr('style').removeClass().css({
+                'font-family': 'nishiki',
+                'font-style': 'normal',
+                'font-weight': 'normal',
+                'font-size': 'large',
+                'color': '#ffffff',
+                'padding-right': '5px'
+            });
             $('.extra').removeAttr('style').removeClass().css({
                 'margin-top': '10px',
                 'padding': '10px',
@@ -75,6 +83,7 @@ function startDigginInYoButtTwin() {
                 'color': '#b0b0b0',
                 'font-size': 'smaller'
             });
+
         } else {
             $('.word-card').removeAttr('style').removeClass().css({
                 'background': '#19191c',
@@ -92,13 +101,26 @@ function startDigginInYoButtTwin() {
                 'font-weight': 'bold',
                 'color': '#ffffff'
             });
+            $('.sitelen').removeAttr('style').removeClass().css({
+                'font-family': 'nishiki',
+                'font-style': 'normal',
+                'font-weight': 'normal',
+                'font-size': 'xx-large',
+                'color': '#ffffff',
+                'padding-right': '5px'
+            });
             $('.extra').removeAttr('style').removeClass().css({
                 'margin-top': '10px',
                 'padding': '10px',
                 'font-style': 'italic',
                 'color': '#b0b0b0',
-                'font-size': 'normal'
+                'font-size': 'small'
             });
+            document.body.querySelectorAll('details')
+            .forEach((e) => {(e.hasAttribute('open')) ?
+                e.removeAttribute('open') : e.setAttribute('open',true);
+                console.log(e.hasAttribute('open'))
+            })
         }
     } else {
         document.getElementById('results-container').innerHTML = `
@@ -124,7 +146,6 @@ function viewmodeToggle() {
 
 
 // search button thing input yeah keypress whatever the FUCK
-searchButton.addEventListener('click', startDigginInYoButtTwin);
 searchInput.addEventListener('input', function(event) {
     startDigginInYoButtTwin();
 });

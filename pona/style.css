@@ -15,7 +15,8 @@ i dont know if its different from using html? so im just going with the usual lm
     font-family: "nishiki";
     font-style: normal;
     font-weight: normal;
-    color: white;
+    font-size: xx-large;
+    color: #ffffff;
     padding-right: 5px;
 }
 
@@ -28,7 +29,7 @@ body {
 }
 
 header {
-    margin: 2%;
+    margin: 1%;
     text-align: center;
 }
 
@@ -70,19 +71,6 @@ main {
     background-color: #19191c;
     border: none;
     font-size: 15px;
-}
-
-#search-button {
-    padding: 15px 25px;
-    cursor: pointer;
-
-    color: #ffffff;
-    background-color: #19191c;
-    border: none;
-    font-size: 15px;
-}
-#search-button:hover {
-    background: #333339;
 }
 
 #viewmode {
@@ -137,13 +125,18 @@ main {
     padding-left: 10px;
     color: #ffed91;
 }
+.frequency-obscure {
+    padding-left: 10px;
+    color: #ff91f8;
+}
+
 
 .extra {
     margin-top: 10px;
     padding: 10px;
     font-style: italic;
     color: #b0b0b0;
-    font-size: normal;
+    font-size: small;
 }
 
 .results {
@@ -172,18 +165,10 @@ footer {
     font-size: small;
 }
 
-/*
+
 @media (max-width: 768px) {
-    #search-button {
-        min-width: 20px;
-        font-size: small;
-    }
     #viewmode {
         min-width: 20px;
         font-size: small;
     }
 }
-
-gotta first figure out if my chrome is tweaking or its actually my site and im
-doing it some other day because im tired lmao
-*/

@@ -163,11 +163,21 @@ summary:hover {
     color: #ffffff;
 }
 
-
 footer {
     margin-top: 10px;
     margin-bottom: 10px;
     text-align: center;
     color: #b0b0b0;
     font-size: small;
+}
+
+@media (max-width: 768px) {
+    #search-button {
+        min-width: 20px;
+        font-size: small;
+    }
+    #viewmode {
+        min-width: 20px;
+        font-size: small;
+    }
 }

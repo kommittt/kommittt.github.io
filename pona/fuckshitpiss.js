@@ -126,13 +126,16 @@ function viewmodeToggle() {
 // search button thing input yeah keypress whatever the FUCK
 searchButton.addEventListener('click', startDigginInYoButtTwin);
 searchInput.addEventListener('keydown', function(event) {
-    if (event.code === 'Enter') {
+    if (event.key === 'Enter') {
+        startDigginInYoButtTwin();
+    }
+    if (event.key === " ") {
         startDigginInYoButtTwin();
     }
     if (event.code === "Space") {
         startDigginInYoButtTwin();
     }
-    if (event.code === "Backspace") {
+    if (event.key === "Backspace") {
         startDigginInYoButtTwin();
     } // idk if this backspace thing is even working :(
 

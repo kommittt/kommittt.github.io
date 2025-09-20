@@ -5,9 +5,11 @@ const sheetLink = 'https://opensheet.elk.sh/1WV2Vb9Qy7BXLrzxspbCfBCwo9vZmoG-13ME
 // search button stuff
 const searchInput = document.getElementById('search-input');
 const searchButton = document.getElementById('search-button');
+const toggleView = document.getElementById('viewmode');
 
 // this lowkey reminds me of python..
 var tokipona = [];
+var viewActive = false;
 
 
 // this gets the searchInput 
@@ -30,13 +32,14 @@ function startDigginInYoButtTwin() {
     
     if (results.length > 0) {
         document.getElementById('results-container').innerHTML = ' ';
+
         results.forEach(item => {
             const wordCards = document.createElement('div');
             wordCards.className = 'word-card';
             wordCards.innerHTML = `
                 <div class="word-header">
-                    <span class="wordtp">${item.word}</span>
-                    <span class="frequency">${item.usage}</span>
+                    <span class="wordtp"> <span class="sitelen">${item.word}</span> ${item.word}</span>
+                    <span class="frequency-${item.usage}">${item.usage}</span>
                 </div>
                 <span class="definition">${item.definition}</span>
                 <span class="extra">
@@ -45,18 +48,84 @@ function startDigginInYoButtTwin() {
                         ${item.extra || 'nothing here!'}
                     </details>
                 </span>`;
+            
             document.getElementById('results-container').appendChild(wordCards);
-        });}
-    else {
-        document.getElementById('results-container').innerHTML = '<div class="results">no definition found for these words or text box is empty</div>';
+        });
+
+        if (viewActive) {
+            $('.word-card').removeAttr('style').removeClass().css({
+                'background': '',
+                'padding': '',
+                'margin-bottom': '',
+                'border': '',
+                'border-style': '',
+                'border-width': '',
+                'border-radius': ''
+            });
+            $('.wordtp').removeAttr('style').removeClass().css({
+                'margin-bottom': '5px',
+                'font-size': 'large',
+                'font-weight': 'bold',
+                'color': '#ffffff'
+            });
+            $('.extra').removeAttr('style').removeClass().css({
+                'margin-top': '10px',
+                'padding': '10px',
+                'font-style': 'italic',
+                'color': '#b0b0b0',
+                'font-size': 'smaller'
+            });
+        } else {
+            $('.word-card').removeAttr('style').removeClass().css({
+                'background': '#19191c',
+                'padding': '20px',
+                'margin-bottom': '10px',
+                'border': '#333339',
+                'border-style': 'solid',
+                'border-width': '2px',
+                'border-radius': '10px',
+                'font-size': ''
+            });
+            $('.wordtp').removeAttr('style').removeClass().css({
+                'margin-bottom': '5px',
+                'font-size': 'x-large',
+                'font-weight': 'bold',
+                'color': '#ffffff'
+            });
+            $('.extra').removeAttr('style').removeClass().css({
+                'margin-top': '10px',
+                'padding': '10px',
+                'font-style': 'italic',
+                'color': '#b0b0b0',
+                'font-size': 'normal'
+            });
+        }
+    } else {
+        document.getElementById('results-container').innerHTML = `
+        <div class="results">
+            no definition found for these words (obscure/sandbox words are not included) or text box is empty
+        </div>`;
     }
-};
+}
+toggleView.addEventListener('click', viewmodeToggle);
+
+function viewmodeToggle() {
+    if (viewActive === false) {
+        toggleView.innerHTML = '☰ list view'; 
+        viewActive = true;
+    } else {
+        toggleView.innerHTML = '🀆 card view';
+        viewActive = false;
+    }
+
+    startDigginInYoButtTwin();
+}
 
 
 
 // search button thing input yeah keypress whatever the FUCK
 searchButton.addEventListener('click', startDigginInYoButtTwin);
-searchInput.addEventListener('keypress', function(event) {
+searchInput.addEventListener('keydown', function(event) {
     if (event.code === 'Enter') {
         startDigginInYoButtTwin();
     }
@@ -66,11 +135,8 @@ searchInput.addEventListener('keypress', function(event) {
     if (event.code === "Backspace") {
         startDigginInYoButtTwin();
     } // idk if this backspace thing is even working :(
-    if (event.code === "Escape") {
-        searchInput.value ('');
-    }
-});
 
+});
 
 
 // today i learned async "waits" so thats cool

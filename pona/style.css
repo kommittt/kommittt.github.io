@@ -2,9 +2,21 @@ html {
     background: #000000;
     font-family: 'Red Hat Text', sans-serif;
     scrollbar-color: #333339 #19191c;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 /* today i learned * in css means all elements
 i dont know if its different from using html? so im just going with the usual lmao */
+
+@font-face {
+    font-family: 'nishiki'; src: url('/fonts/nishiki-teki-lili.ttf');
+}
+.sitelen {
+    font-family: "nishiki";
+    font-style: normal;
+    color: white;
+    padding-right: 5px;
+}
 
 body {
     display: flex;
@@ -31,8 +43,6 @@ h1 {
     font-size: normal;
     margin-top: 10px;
 }
-
-
 
 main {
     width: 100%;
@@ -75,6 +85,19 @@ main {
     background: #333339;
 }
 
+#viewmode {
+    padding: 15px 25px;
+    cursor: pointer;
+
+    color: #ffffff;
+    background-color: #19191c;
+    border: none;
+    font-size: 15px;
+}
+#viewmode:hover {
+    background: #333339;
+}
+
 .results-container {
     margin-top: 10px;
 }
@@ -102,10 +125,17 @@ main {
     color: #ffffff;
 }
 
-.frequency {
+.frequency-core {
     padding-left: 10px;
-    background: #19191c;
-    color: #b0b0b0;
+    color: #a1ff91;
+}
+.frequency-common {
+    padding-left: 10px;
+    color: #91adff;
+}
+.frequency-uncommon {
+    padding-left: 10px;
+    color: #ffed91;
 }
 
 .extra {
@@ -113,12 +143,25 @@ main {
     padding: 10px;
     font-style: italic;
     color: #b0b0b0;
+    font-size: normal;
 }
 
 .results {
     text-align: center;
     font-size: normal;
     color: #b0b0b0;
+}
+
+.word-list {
+    background: #19191c;
+}
+
+summary {
+    user-select: none;
+    cursor: pointer;
+}
+summary:hover {
+    color: #ffffff;
 }
 
 

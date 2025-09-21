@@ -168,7 +168,7 @@ footer {
 
 @media (max-width: 768px) {
     #viewmode {
-        min-width: 20px;
+        min-width: 30px;
         font-size: small;
     }
 }

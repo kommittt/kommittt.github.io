@@ -15,7 +15,8 @@ var viewActive = false;
 // this gets the searchInput 
 function startDigginInYoButtTwin() {
     const sanitizeSearch = searchInput.value.trim().toLowerCase();
-    const noSpaces = sanitizeSearch.split(' ');
+    const removePunc = sanitizeSearch.replace(/[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g, '');
+    const noSpaces = removePunc.split(' ');
     const finalWord = noSpaces;
 
     var results = [];
@@ -125,7 +126,7 @@ function startDigginInYoButtTwin() {
     } else {
         document.getElementById('results-container').innerHTML = `
         <div class="results">
-            no definition found for these words (obscure/sandbox words are not included) or text box is empty
+            no definition found for these words (sandbox words are not included) or text box is empty
         </div>`;
     }
 }

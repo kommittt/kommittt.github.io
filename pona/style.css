@@ -172,3 +172,75 @@ footer {
         font-size: small;
     }
 }
+
+/* card presentation mode */
+.card-mode .word-card {
+    background: '#19191c';
+    padding: '20px';
+    margin-bottom: '10px';
+    border: '#333339';
+    border-style: 'solid';
+    border-width: '2px';
+    border-radius: '10px';
+    font-size: unset;
+}
+
+.card-mode .wordtp {
+    margin-bottom: '5px';
+    font-size: 'x-large';
+    font-weight: 'bold';
+    color: '#ffffff';
+}
+
+.card-mode .sitelen {
+    font-family: 'nishiki';
+    font-style: 'normal';
+    font-weight: 'normal';
+    font-size: 'xx-large';
+    color: '#ffffff';
+    padding-right: '5px';
+}
+
+
+.card-mode .extra {
+    margin-top: '10px';
+    padding: '10px';
+    font-style: 'italic';
+    color: '#b0b0b0';
+    font-size: 'small';
+}
+
+/* list presentation mode */
+.list-mode .word-card {
+    background: unset;
+    padding: unset;
+    margin-bottom: unset;
+    border: unset;
+    border-style: unset;
+    border-width: unset;
+    border-radius: unset;
+}
+
+.list-mode .wordtp {
+    margin-bottom: '5px';
+    font-size: 'large';
+    font-weight: 'bold';
+    color: '#ffffff';
+}
+
+.list-mode .sitelen {
+    font-family: 'nishiki';
+    font-style: 'normal';
+    font-weight: 'normal';
+    font-size: 'xx-large';
+    color: '#ffffff';
+    padding-right: '5px';
+}
+
+.list-mode .extra {
+    margin-top: '10px';
+    padding: '10px';
+    font-style: 'italic';
+    color: '#b0b0b0';
+    font-size: 'smaller';
+}

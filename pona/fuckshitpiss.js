@@ -80,6 +80,11 @@ function makeUnknownCard(word) {
         }
     }
 
+    // if it would be a valid word if it were lowercased, use the lowercase version
+    const lowercaseWord = word.toLowerCase();
+    if (tokipona[lowercaseWord] !== undefined) {
+        return makeWordCard(tokipona[lowercaseWord]);
+    }
 
     const newCard = document.createElement('div');
     newCard.className = 'word-card';

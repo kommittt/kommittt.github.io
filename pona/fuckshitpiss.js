@@ -26,7 +26,7 @@ var didLoadBackup = false;
 
 // this gets the searchInput 
 function startDigginInYoButtTwin() {
-    const sanitizeSearch = searchInput.value.trim().toLowerCase();
+    const sanitizeSearch = searchInput.value.trim();
     const removePunc = sanitizeSearch.replace(/[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g, '');
     const noSpaces = removePunc.split(' ');
     const finalWords = noSpaces.filter(word => word.length > 0);
@@ -61,15 +61,131 @@ function startDigginInYoButtTwin() {
 }
 
 function makeUnknownCard(word) {
+    // if the first letter is uppercase, try to make a proper noun
+    if (word[0] === word[0].toUpperCase()) {
+        const properNameCard = makeProperNounCard(word);
+        if (properNameCard !== null) {
+            return properNameCard;
+        } else {
+            // make a card that says it is not a valid proper noun
+            const newCard = document.createElement('div');
+            newCard.className = 'word-card';
+            newCard.innerHTML = `
+                <div class="word-header">
+                    <span class="wordtp"> <span class="sitelen">seme a</span> ${word}</span>
+                </div>
+                <span class="definition">word is capitalized like a proper noun, but contains invalid letters</span>`;
+
+            return newCard;
+        }
+    }
+
+
     const newCard = document.createElement('div');
     newCard.className = 'word-card';
     newCard.innerHTML = `
         <div class="word-header">
-            <span class="wordtp"> <span class="sitelen">seme seme</span> ${word}</span>
+            <span class="wordtp"> <span class="sitelen">seme a</span> ${word}</span>
         </div>
-        <span class="definition">unknown word, maybe proper name or experimental</span>`;
+        <span class="definition">unknown word, maybe experimental or a proper noun (try capitalizing)</span>`;
 
     return newCard;
+}
+
+/**
+ * @param {string} letter 
+ */
+function getCartoucheOptions(letter) {
+    letter = letter.toLowerCase();
+    // find the words starting with the letter, only from core+common sets
+    const cartoucheOptions = Object.keys(tokipona)
+        .filter(word => tokipona[word].usage_category === 'core' || tokipona[word].usage_category === 'common')
+        .filter(word => word.startsWith(letter));
+    return cartoucheOptions;
+}
+
+function makeProperNounCard(word) {
+    const possibleWordOptions = [];
+    // for every letter in the word, find the cartouche options
+    for (const letter of word) {
+        var thisLetterOptions = getCartoucheOptions(letter);
+        if (thisLetterOptions.length === 0) {
+            return null;
+        }
+        possibleWordOptions.push(thisLetterOptions);
+    }
+
+    // at this time, we have a list of words to place in every letter's place
+    const generateCartouche = () => {
+        const root = document.createElement('span');
+        root.appendChild(document.createTextNode('['));
+        possibleWordOptions.forEach((wordlist, idx) => {
+            const randomWord = wordlist[Math.floor(Math.random() * wordlist.length)];
+            var pickedWord = randomWord;
+            const preferredWord = getPreferredCartoucheContent(word, idx);
+            if (preferredWord !== null) {
+                pickedWord = preferredWord;
+            }
+
+            const thisLetterSpan = document.createElement('span');
+            thisLetterSpan.className = 'highlightOnHover';
+            thisLetterSpan.innerText = pickedWord;
+            thisLetterSpan.setAttribute('title', pickedWord);
+            thisLetterSpan.addEventListener('click', () => {
+                const randomWord = wordlist[Math.floor(Math.random() * wordlist.length)];
+                thisLetterSpan.innerText = randomWord;
+                thisLetterSpan.setAttribute('title', randomWord);
+                setPreferredCartoucheContent(word, idx, randomWord);
+            });
+            root.appendChild(thisLetterSpan);
+        });
+        root.appendChild(document.createTextNode(']'));
+        return root;
+    };
+
+    const newCard = document.createElement('div');
+    newCard.className = 'word-card';
+    newCard.innerHTML = `
+        <div class="word-header">
+            <span class="wordtp">
+                <span class="sitelen"></span>
+                <button>&#x1F504;</button>                
+                ${word}
+            </span>
+        </div>
+        <span class="definition">proper noun (try clicking on individual symbols to customize)</span>`;
+    
+    newCard.querySelector('.sitelen').replaceChildren(generateCartouche());
+    // add click handler to button
+    newCard.querySelector('button').addEventListener('click', () => {
+        clearPreferredCartoucheContent(word);
+        newCard.querySelector('.sitelen').replaceChildren(generateCartouche());
+    });
+
+    return newCard;
+}
+
+// in word `word`, at position `index`, what symbol does the user prefer? null for no preference
+function getPreferredCartoucheContent(word, index) {
+    const data = localStorage.getItem('cartouche-' + word);
+    if (data === null) {
+        return null;
+    }
+
+    const parsedData = JSON.parse(data);
+    return parsedData["idx-"+index] || null;
+}
+
+// in word `word`, at position `index`, the user prefers to use symbol `content`
+function setPreferredCartoucheContent(word, index, content) {
+    const existingData = localStorage.getItem('cartouche-' + word);
+    const parsedData = existingData === null ? {} : JSON.parse(existingData);
+    parsedData["idx-"+index] = content;
+    localStorage.setItem('cartouche-' + word, JSON.stringify(parsedData));
+}
+
+function clearPreferredCartoucheContent(word) {
+    localStorage.removeItem('cartouche-' + word);
 }
 
 function makeWordCard(item) {

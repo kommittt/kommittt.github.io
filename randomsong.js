@@ -74,13 +74,7 @@ function whatthefuck() {
     function songNumba() {
         const countElement = document.getElementById('icantcount');
         countElement.textContent = songs.length;
-
-        const today = new Date();
-        const dateString = today.toLocaleDateString('en-GB');
-        document.getElementById('update').textContent = dateString;
     }
-
-
 }
 
 whatthefuck();

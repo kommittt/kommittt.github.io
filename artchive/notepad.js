@@ -3,9 +3,9 @@ dragElement(document.getElementById("notepad"));
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  if (document.getElementById("notepadheader")) {
+  if (document.getElementById(elmnt.id + "notepadheader")) {
     // if present, the header is where you move the DIV from:
-    document.getElementById("notepadheader").onmousedown = dragMouseDown;
+    document.getElementById(elmnt.id + "notepadheader").onmousedown = dragMouseDown;
   } else {
     // otherwise, move the DIV from anywhere inside the DIV:
     elmnt.onmousedown = dragMouseDown;
@@ -22,49 +22,31 @@ function dragElement(elmnt) {
     document.onmousemove = elementDrag;
   }
 
-function elementDrag(e) {
+  function elementDrag(e) {
     e = e || window.event;
     e.preventDefault();
+    // calculate the new cursor position:
     pos1 = pos3 - e.clientX;
     pos2 = pos4 - e.clientY;
     pos3 = e.clientX;
     pos4 = e.clientY;
-    
-    // Correct right-edge constraint
-    const notepadWidth = elmnt.offsetWidth;
-    const maxLeft = window.innerWidth - notepadWidth;
-    const newLeft = Math.max(0, Math.min(elmnt.offsetLeft - pos1, maxLeft));
-    
-    elmnt.style.left = newLeft + "px";
+    // set the element's new position:
     elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-}
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
 
   function closeDragElement() {
     // stop moving when mouse button is released:
     document.onmouseup = null;
     document.onmousemove = null;
   }
-
-  $(window).resize(function() {
-
-    if ($(this).width() < 400) {
-  
-      $('.notepad').hide();
-  
-    } else {
-  
-      $('.notepad').show();
-  
-      }
-  
-  });
-
 }
 
 function closeNotepad() {
-  document.getElementById('notepad').style.display = 'none';
-  document.getElementById('textchangescript').style.display = 'none';
+    document.getElementById('notepad').style.display = 'none';
+    document.getElementById('textchangescript').style.display = 'none';
 
-  window.location = loc;
+    window.location = loc;
 }
 
+// we3schools stay winning (i would kiss whoever made it if i could)

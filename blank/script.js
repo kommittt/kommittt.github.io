@@ -20,5 +20,3 @@ function playSound(src) {
 
   audio.play(); // if all those conditions arent met then play (most likely first instance)
 }
-
-// every time i take a break from coding i forget every single thing ive learned before

@@ -9,7 +9,7 @@ html {
 i dont know if its different from using html? so im just going with the usual lmao */
 
 @font-face {
-    font-family: 'nishiki'; src: url('assets/fonts/nishiki-teki-lili.ttf');
+    font-family: 'nishiki'; src: url('/fonts/nishiki-teki-lili.ttf');
 }
 .sitelen {
     font-family: "nishiki";

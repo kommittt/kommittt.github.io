@@ -4,4 +4,4 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min; // The maximum is exclusive and the minimum is inclusive
   }
   
-  document.write('<img src="/.assets/images/randompfps/' + getRandomInt(1, 18) + '.png">')
+  document.write('<img src=".assets/images/randompfps/' + getRandomInt(1, 18) + '.png">')

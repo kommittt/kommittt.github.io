@@ -1,19 +1,17 @@
 @charset "UTF-8";
 
 html{
-    font-family:'Arial', sans-serif;
-    color:#ffffff; 
+    font-family:'Doto', sans-serif;
     background-color: #000000; 
 }
 
-.whosthere{
+.intermediary{
     margin-top: 100px;
     text-align: center;
-    color:#000000; 
+    color: #000000;
 }
 
 .call img{
-    z-index: -1;
     position: fixed;
     top: 50%;
     left: 50%;

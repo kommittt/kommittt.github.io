@@ -3,6 +3,13 @@ html{
     overflow-x: hidden;
 }
 
+.crtdance{
+    position: fixed;
+    bottom: 4%;
+    left: 3%;
+    user-select: none;
+}
+
 .titleandstuff{
     font-family: 'Quantico', sans-serif;
     text-align: center;

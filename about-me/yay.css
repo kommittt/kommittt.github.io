@@ -17,10 +17,10 @@ html {
              1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
 }
 @font-face {
-    font-family: 'determination'; src: url('../.assets/fonts/DeterminationSansWeb.ttf');
+    font-family: 'determination'; src: url('../assets/fonts/DeterminationSansWeb.ttf');
 }
 @font-face {
-    font-family: 'deltasmall'; src: url('../.assets/fonts/deltasmall.otf');
+    font-family: 'deltasmall'; src: url('../assets/fonts/deltasmall.otf');
 }
 
 .boxlol {

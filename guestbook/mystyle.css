@@ -5,7 +5,7 @@ html{
     cursor: crosshair;
 }
 @font-face {
-    font-family: 'mctitle'; src: url('../.assets/fonts/mctitle.ttf') format('truetype');
+    font-family: 'mctitle'; src: url('../assets/fonts/mctitle.ttf') format('truetype');
 }
 
 .background {

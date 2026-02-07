@@ -1,6 +1,6 @@
 /* FONTS FONTS FONTS FONTS FONTS FONTS FONTS FONTS FONTS FONTS FONTS FONTS FONTS FONTS */
 @font-face {
-    font-family: 'determination'; src: url('../.assets/fonts/DeterminationSansWeb.ttf');
+    font-family: 'determination'; src: url('../assets/fonts/DeterminationSansWeb.ttf');
 }
 .determination {
     font-family: "determination", 'Minecraftia', monospace;
@@ -13,7 +13,7 @@
 }
 
 @font-face {
-    font-family: 'utsans'; src: url('../.assets/fonts/UndertaleSans.ttf');
+    font-family: 'utsans'; src: url('../assets/fonts/UndertaleSans.ttf');
 }
 .utsans {
     font-family: "utsans", 'Minecraftia', monospace;
@@ -27,7 +27,7 @@
 }
 
 @font-face {
-    font-family: 'utpapyrus'; src: url('../.assets/fonts/UndertalePapyrus.ttf');
+    font-family: 'utpapyrus'; src: url('../assets/fonts/UndertalePapyrus.ttf');
 }
 .utpapyrus {
     font-family: "utpapyrus", 'Minecraftia', monospace;
@@ -40,7 +40,7 @@
 }
 
 @font-face {
-    font-family: 'dealer'; src: url('../.assets/fonts/Fake\ Receipt.otf');
+    font-family: 'dealer'; src: url('../assets/fonts/Fake\ Receipt.otf');
 }
 .dealer {
     font-family: "dealer", 'Minecraftia', monospace;
@@ -53,7 +53,7 @@
 }
 
 @font-face {
-    font-family: 'vcr'; src: url('../.assets/fonts/VCR_OSD_MONO_1.001.ttf');
+    font-family: 'vcr'; src: url('../assets/fonts/VCR_OSD_MONO_1.001.ttf');
 }
 .vcr {
     font-family: "vcr", 'Minecraftia', monospace;
@@ -66,7 +66,7 @@
 }
 
 @font-face {
-    font-family: 'omori'; src: url('../.assets/fonts/OMORI_GAME2.ttf');
+    font-family: 'omori'; src: url('../assets/fonts/OMORI_GAME2.ttf');
 }
 .omori {
     font-family: "omori", 'Minecraftia', monospace;
@@ -78,7 +78,7 @@
 }
 
 @font-face {
-    font-family: 'balatro'; src: url('../.assets/fonts/balatro.ttf');
+    font-family: 'balatro'; src: url('../assets/fonts/balatro.ttf');
 }
 .balatro {
     font-family: "balatro", 'Minecraftia', monospace;
@@ -90,7 +90,7 @@
 }
 
 @font-face {
-    font-family: 'ggsans'; src: url('../.assets/fonts/ggsansmed.ttf');
+    font-family: 'ggsans'; src: url('../assets/fonts/ggsansmed.ttf');
 }
 .ggsans {
     font-family: "ggsans";

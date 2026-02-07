@@ -10,7 +10,7 @@ html {
     background-attachment: fixed;
 }
 @font-face {
-    font-family: 'winxp'; src: url('/.assets/fonts/winxp.otf');
+    font-family: 'winxp'; src: url('../.assets/fonts/winxp.otf');
 }
 
 .boc {

@@ -760,6 +760,11 @@ var messages = [
     `wawawaw!`,
     `I DONT HAVE TO UPDATE THE SPLASH TEXT COUNTER MANUALLY ANYMORE YAAAAAAAY`,
     `text (intentional)`,
+    `broken on day one!`,
+    `special thanks to macedev and danya02!`,
+    `love you hyphen!`,
+    `love you moda!`,
+    `love you moon!`,
 
 ];
 var noMoreManualEditing = messages.length;

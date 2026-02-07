@@ -5,7 +5,7 @@ function getRandomInt(min, max) {
 }
 
 const ranNum = getRandomInt(1, 22);
-const path = '../assets/wippage/stuff/' + ranNum + '.gif';
+const path = '/assets/wippage/stuff/' + ranNum + '.gif';
 const htmllol = '<img style="margin-top: 20px; max-width: 50%;" src="'
 
 // this reminds me of python so much

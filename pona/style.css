@@ -10,6 +10,15 @@ i dont know if its different from using html? so im just going with the usual lm
 @font-face {
     font-family: 'nishiki'; src: url('/.assets/fonts/sitelenselikiwenasuki.ttf');
 }
+
+.highlightOnHover {
+    cursor: pointer;
+}
+
+.highlightOnHover:hover {
+    color:#ffed91;
+}
+
 .sitelen {
     font-family: "nishiki";
     font-style: normal;
@@ -17,6 +26,13 @@ i dont know if its different from using html? so im just going with the usual lm
     font-size: xx-large;
     color: #ffffff;
     padding-right: 5px;
+    /* unselectable */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 body {

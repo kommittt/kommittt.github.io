@@ -1,21 +1,22 @@
 @charset "UTF-8";
 
-/* BRUH WHY IS THIS FILE CALLED ULTRAKILL 🔫🔫🔫 */
-/* cause- JUUUDGEMENT! DIE! USELESS! RAAAAAGHHHH- */
+/* hi mace! if youre still here, i dedicated this css for you :)
+may you forever be immortalized in this silly project
+hope youre doing well out there man <3 */
 
 html{
     font-family:'Ubuntu', 'Calibri', sans-serif;
     text-align: center;
     color:#ffffff;
-    background: #0e0e0e;
+    background: #011204;
     background-image: url('bg.svg');
     background-attachment: fixed;
     background-position: center;
-    scrollbar-color: #4b4b4b #262626;   
+    scrollbar-color: #303c2f #262626;   
 }
 
 h1{
-    background:#444444;
+    background:#5b9061;
     padding: 20px 10px 20px 10px;
     border: none;
     border-radius: 10px;
@@ -40,18 +41,18 @@ h2{
     margin: 0;
     padding: 0;
     width: 250px;
-    background: #0e0e0e;
+    background: #011204;
     background-attachment: fixed;
     position: fixed;
     height: 97%;
     overflow: auto;
     top: auto;
-    border: #444444;
+    border: #5b9061;
     border-style: solid;
     border-radius: 10px;
 }
 .sidebar h3 {
-    background:#444444;
+    background:#5b9061;
     padding: 4%;
     margin: 2%;
     margin-bottom: 12px;
@@ -68,7 +69,7 @@ h2{
 }
 .sidebar a.workinprogress {
     margin: 2%;
-    color: #444444;
+    color: #5b9061;
     text-decoration: line-through;
 }
 .sidebar a.workinprogress:hover:not(.active){
@@ -77,7 +78,7 @@ h2{
 }
 .sidebar a.active {
     margin: 2%;
-    background: #886644;
+    background: #448846;
     color: #ffffff;
     border-radius: 10px;
 }
@@ -86,7 +87,7 @@ h2{
 }
 .sidebar a:hover:not(.active) {
     margin: 2%;
-    background-color: #444444;
+    background-color: #5b9061;
     color: white;
     border-radius: 10px;
 }
@@ -127,7 +128,7 @@ div.content {
 .linkswoa a {
     text-align: center;
     padding: 0.8rem;
-    background-color: #444444;
+    background-color: #5b9061;
     border-radius: 10px;
     color: #ffffff;
 }
@@ -138,14 +139,14 @@ div.content {
 }
 .contactthing:hover{
     color: #ffffff;
-    background-color: #886644;
+    background-color: #448846;
 }
 
 
 /* ZE NAVI!!!!!!!!!!!!!!!!!! */
 .buttonnavi{
     font-family:'Ubuntu', 'Calibri', sans-serif;
-    background-color: #444444;
+    background-color: #5b9061;
     padding: 5px 17px 5px 17px;
     color: #ffffff;
     margin-left: 10% auto;
@@ -156,11 +157,11 @@ div.content {
     min-height: 36px;
 }
 .buttonnavi:hover{
-    background-color: #886644;
+    background-color: #448846;
 }
 
 .navilinks{
-    color: #886644;
+    color: #448846;
 }
 .navilinks:hover{
     color: #d2883e;
@@ -169,15 +170,15 @@ div.content {
 
 /* links */
 a{
-    color: #886644;
+    color: #448846;
 }
 a:hover{
-    color: #de8226;
+    color: #26de48;
 }
 
 /* text styles and stuff */
 .col{
-    color: #ffa3a3;
+    color: #43ff39;
 }
 
 .grey{
@@ -187,12 +188,12 @@ a:hover{
 }
 
 .small{
-    color: #444444;
+    color: #5b9061;
     font-size: small;
 }
 
 .link{
-    color: #afafaf;
+    color: #9faba1;
     font-size: small;
 }
 .link:hover{
@@ -202,11 +203,11 @@ a:hover{
 summary{
     font-weight: bold;
     color: #ffffff;
-    color: #886644;
+    color: #448846;
     cursor: pointer;
 }
 summary:hover{
-    color: #de8226;
+    color: #26de48;
 }
 /* text styles and stuff */
 
@@ -222,7 +223,7 @@ summary:hover{
     margin-right: 4%;
 }
 .category{
-    background-color: #0e0e0e;
+    background-color: #011204;
     display: flex;
     flex-direction: column;
     flex-basis: calc(50% - 10px);
@@ -231,7 +232,7 @@ summary:hover{
 }
 .category a{
     padding: 20px;
-    border: 4px solid #444444;
+    border: 4px solid #5b9061;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -247,17 +248,17 @@ summary:hover{
     text-decoration: none;
 }
 .category a:hover .small{
-    color: #afafaf;
+    color: #5b9061;
 }
 .category .bigguy{
     font-size: x-large;
-    color: #886644;
+    color: #448846;
 }
 .category a:hover{
-    background-color: #444444;
+    background-color: #5b9061;
 }
 .category a:hover .bigguy{
-    color: #de8226;
+    color: #26de48;
     font-weight: bold;
 }
 @media (max-width: 768px) {
@@ -277,7 +278,7 @@ summary:hover{
 
 .temporary p{
     padding: 25px;
-    border: #444444;
+    border: #5b9061;
     border-style: dotted;
     border-radius: 10px;
 

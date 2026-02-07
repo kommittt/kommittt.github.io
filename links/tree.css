@@ -1,0 +1,118 @@
+@charset "UTF-8";
+
+#particles-js{
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    background-image: url('');
+    background-size: contain;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    user-select: none;
+}
+
+html {
+    font-family: 'Azeret Mono', Courier, monospace;
+    background-color: #000000;
+    color: #ababab;
+    overflow-x: hidden;
+    scrollbar-color: #333333 #000000;
+}
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    place-items: center;
+}
+
+.containter{
+    position: absolute;
+    transform: translateX(-50%);
+
+    width: 50%;
+    top: 10%;
+    left: 50%;
+}
+.box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2%;
+
+    padding: 4%;
+    backdrop-filter: blur(2px);
+    border: 3px solid #33333375;
+    border-radius: 20px;
+}
+.why {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 3%;
+    gap: 25px;
+}
+
+img {
+    width: auto;
+    max-width: 30vh;
+    align-self: center;
+}
+
+h2, .wa, a{
+    text-align: center;
+}
+
+.linku {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: small;
+
+    transition: all 0.2s ease-in-out;
+}
+.linku:hover {
+    text-shadow: 0 0 8px #ffffff;
+    text-decoration: underline;
+}
+@media (max-width: 800px) {
+    .linku {
+        width: 80%;
+    }
+    .why {
+        gap: 10px;
+        margin-top: 10%;
+    }
+    .containter{
+        width: 80%;
+    }
+}
+
+button {
+    font-family: 'Azeret Mono', Courier, monospace;
+    color: #ababab;
+    background-color: #00000000;
+
+    padding: 15px 20px;
+    width: 80%;
+    margin-top: 20px;  
+    align-items: center;
+    align-self: center;
+    cursor: pointer;
+
+    border: 1px solid #333333;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+}
+button:hover {
+    background-color: #4d4d4d7a;
+    border: 1px solid #434343;
+    color: #ffffff;
+}
+i {
+    font-size: large;
+}
+
+

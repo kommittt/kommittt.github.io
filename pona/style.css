@@ -1,5 +1,4 @@
 html {
-    background: #000000;
     font-family: 'Red Hat Text', sans-serif;
     scrollbar-color: #333339 #19191c;
     max-width: 100%;
@@ -9,7 +8,7 @@ html {
 i dont know if its different from using html? so im just going with the usual lmao */
 
 @font-face {
-    font-family: 'nishiki'; src: url('assets/fonts/nishiki-teki-lili.ttf');
+    font-family: 'nishiki'; src: url('/.assets/fonts/sitelenselikiwenasuki.ttf');
 }
 .sitelen {
     font-family: "nishiki";
@@ -21,6 +20,7 @@ i dont know if its different from using html? so im just going with the usual lm
 }
 
 body {
+    background-color: #000000;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -243,4 +243,28 @@ footer {
     font-style: 'italic';
     color: '#b0b0b0';
     font-size: 'smaller';
+}
+
+.psp {
+    font-family: 'Red Hat Text', sans-serif;
+    position: fixed;
+    font-weight: bold;
+    top: 20px;
+    right: 20px;
+    color: #b0b0b0;
+    font-size: small;
+}
+
+a {
+    color: #ffffff;
+}
+a:hover {
+    text-shadow: 0 0 5px #ffffff;
+}
+
+.distract {
+    font-size: small;
+    letter-spacing: 2px;
+    padding-top: 10px;
+    text-decoration: none;
 }

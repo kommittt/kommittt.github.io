@@ -2,112 +2,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>☄ guestbook ☄</title>
-    <link href="/images/ico-homepage.png" rel="icon" type="image/x-icon">
+    <title>guestbook - ☄</title>
+    <link href="ico-guestbook.png" rel="icon" type="image/x-icon">
     <link href="mystyle.css" rel="stylesheet">
     <meta name="description" content="* A dusty book and quill is sitting on top of a table. Write on it?">
     <meta name="author" content="kommit">
 
     <link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/minecraftia">
 </head>
 
+<div class="background"></div>
+<div class="crtdance">
+    <p> &lt;kommittt&gt;
+        <br>hi! dont mind me, 
+        <br>just chilling
+    </p>
+    <!-- aster no swiping )silly -->
+    <img src="kommittt.gif" width="100px" draggable="false" title="do not the kommit">
+</div>
+
 <body>
-    <div id="GuestBook">
-        <div class="titleandstuff">
-            <h1>kommit's guestbook</h1>
-            <p>
-                hiya, welcome to my guestbook!
-                <br>feel free to leave a message or two, anonymous or not :P putting your own website link is also encouraged!
-                <br><span class="small">you should recommend me a song that would be awesome :D</span>
-                <br>all i ask for you is to be <b>respectful</b> and to not submit anything weird, personal, or plain ol' spam 💔
-            </p>
-            <a class="homething" href="/index.html">go back to home</a>
-        </div>
+    <div class="titleandstuff">
+        <h1>kommit's guestbook</h1>
+    </div>
 
-        <div class="buttons">
-            <div class="links">
-                <a href="#AllEntries">view all entries</a>
-                <a href="#SignGuestBook">sign the guestbook</a>
-                <a onClick="window.location.reload();">refresh content</a>
-            </div>
-        </div>
+    <div class="buttons">
+        <a href="/index.html">go back to homepage</a>
+        <a href="https://classic.minecraft.net/">play classic minecraft</a>
+        <a href="/paint/" title="go here if you want to ask me something or draw! (straw.page basically)">draw something/ask me</a>
+    </div>
 
-        <h3 id="t">recent entries:</h3>
+    <div class="parent">
+        <div class="div1">
 
-        <!-- Homepage -->
-        <div class="container">
-            <div id="json" class="guestbook"></div>
-        </div>
-
-        <div id="SignGuestBook" class="overlay">
-            <div id="SendForm" class="sign-guest-book-popup">
-                <h2>sign the guestbook</h2>
-                <a class="close" href="#">[ &times; ]</a>
-
-                <div class="content">
-
-                    <form name="gform" id="gform" enctype="text/plain" action="GOOGLE_FORM_URL" target="hidden_iframe" onsubmit="submitted=true;">
-                        <label for="GOOGLE_ENTRY_ID_Name" class="aterisk_after">your name (or anonymous)</label>
-                        <br>
-                        <input class="form-element short" type="text" name="GOOGLE_ENTRY_ID_Name" id="GOOGLE_ENTRY_ID_Name" placeholder="kommit" style="background: #2d2d31;" required>
-                        <br>
-                        <label for="GOOGLE_ENTRY_ID_Email">your github/website/link<span class="small"> max length: 128 characters</span> </label>
-                        <br>
-                        <input class="form-element short" type="text" name="GOOGLE_ENTRY_ID_Email" id="GOOGLE_ENTRY_ID_Email" placeholder="kommittt.github.io" style="background: #2d2d31;">
-                        <br>
-                        <label for="GOOGLE_ENTRY_ID_TextArea" class="max-length">your entry</label>
-
-                        <textarea class="form-element" name="GOOGLE_ENTRY_ID_TextArea" id="GOOGLE_ENTRY_ID_TextArea" rows="5"
-                            cols="30" oninvalid="this.setCustomValidity('you must sign the guestbook')"
-                            oninput="this.setCustomValidity('')" maxlength="128" placeholder="write your entry here"
-                            required></textarea>
-
-                        <label for="g-recaptcha" class="aterisk_after">captcha</label>
-                        <div class="g-recaptcha" data-sitekey="GOOGLE_Captcha_Key"></div>
-
-                        <input class="form-button" type="submit" value="log entry">
-                        <input class="form-button" type="reset" value="reset entry">
-                    </form>
+            <div class="div1-top oaksign">
+                <div class="oaksign-text">
+                    welcome to my guestbook!
+                    <br>feel free to leave a message but dont be weird and dont spam &lt;/3
+                    <br>thanks for visiting my site!
                 </div>
             </div>
-        </div>
 
-        <div class="crtdance">
-            <img src="/images/crtdance.gif" width="100px"
-            alt="look at him go" draggable="false" title="hi!">
-        </div>
-
-        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
-
-        <div id="AllEntries" class="overlay">
-            <div class="popup">
-                <h2>all entries:</h2>
-                <a class="close" href="#">[&times;] </a>
-                <div id="AllEntries_Content" class="content" style="height: 25em;overflow-y: auto;"></div>
+            <div class="div1-bottom">
+                <div class="container">
+                    <div id="json" class="guestbook"></div>
+                </div>
             </div>
+
         </div>
-    </div>
+
+            <div id="GuestBook" class="div2">
+                    <div id="SendForm" class="page"> 
+                        
+                        <div class="pagecontent">
+
+                            <h2 class="signprompt">sign the guestbook</h2>
+
+                            <form name="gform" id="gform" action="https://docs.google.com/forms/d/e/1FAIpQLSdTYysdQFCvYpft154i6bR5qAC-vxrwMYjzDw4BoIGsNWpMQA/formResponse" target="hidden_iframe">
+                                
+                                <label for="entry.990509910" class="aterisk_after"> &gt;&gt; your name</label>
+                                <input class="form-element short fuck" type="text" name="entry.990509910" id="entry.990509910" placeholder="kommit" style="width: 100%;" required>
+                                
+                                <label for="entry.773688358"> &gt;&gt; your link (github/web)</label>
+                                <input class="form-element short fuck" type="text" name="entry.773688358" id="entry.773688358" placeholder="kommittt.github.io" style="width: 100%; margin-bottom: 10px;">
+                                
+                                <label for="entry.1675800829" class="max-length"> &gt;&gt; your entry</label>
+                                <textarea class="form-element fuck" name="entry.1675800829" id="entry.1675800829" rows="5" style="width: 100%;" placeholder="write your entry here" required></textarea>
+
+                                <div style="margin-top: 15px; display: flex; gap: 10px;">
+                                    <input class="form-button" type="submit" value="log entry">
+                                </div>
+                            </form>
+                        </div>
+                        <br> <br> <br>
+                    </div>
+                </div>
+                
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+    </main>
 </body>
 
 <script type="text/javascript">
-  // Put your Google Entry Form ID(s) Here
-  // https://docs.google.com/forms/d/e/1FAIpQLSdTYysdQFCvYpft154i6bR5qAC-vxrwMYjzDw4BoIGsNWpMQA/viewform?usp=pp_url&entry.990509910=12345&entry.773688358=qwert&entry.1675800829=asdfg
-  var GOOGLE_ENTRY_ID_Name = "entry.990509910";   // Name Entry ID
-  var GOOGLE_ENTRY_ID_Email = "entry.773688358";	// Email Entry ID			
-  var GOOGLE_ENTRY_ID_Guestbook = "entry.1675800829"; // Guestbook Entry ID				
+    var GOOGLE_ENTRY_ID_Name = "entry.990509910";
+    var GOOGLE_ENTRY_ID_Email = "entry.773688358";		
+    var GOOGLE_ENTRY_ID_Guestbook = "entry.1675800829";		
 
-  // Put your Google Form Link Here  (Make sure to use correct link as documented)
-  // https://docs.google.com/spreadsheets/d/1EfTQwHl8lQY6xBw0mhnLnfVDx3emG0qclqrvpGNwses/edit?usp=sharing
-  var Google_Form_Link = "https://docs.google.com/forms/d/e/1FAIpQLSdTYysdQFCvYpft154i6bR5qAC-vxrwMYjzDw4BoIGsNWpMQA/formResponse?"
-  var Google_Form_ID = "1EfTQwHl8lQY6xBw0mhnLnfVDx3emG0qclqrvpGNwses"
-  var Google_Form_Name = "Form+Responses+1"
-
-  // Google Recaptcha Key 
-  var CaptchaKey = "6LeW06wrAAAAALZKUsy0CZOeM17wL5SBJIXGa3Rf" // put your Google Captcha Key here
+    var Google_Form_Link = "https://docs.google.com/forms/d/e/1FAIpQLSdTYysdQFCvYpft154i6bR5qAC-vxrwMYjzDw4BoIGsNWpMQA/formResponse?"
+    var Google_Form_ID = "1EfTQwHl8lQY6xBw0mhnLnfVDx3emG0qclqrvpGNwses"
+    var Google_Form_Name = "Form+Responses+1"
 </script>
-
-<script src="replace-vars.js"></script>
 
 <script src="guest-book-WIP.js"></script>

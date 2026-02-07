@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>about me - ☄</title>
+    <link href="ico-about.png" rel="icon" type="image/x-icon">
+    <link href="yay.css" rel="stylesheet">
+    <meta name="description" content="where do you want to go?">
+    <meta name="author" content="kommit">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- thank you https://github.com/tholman/cursor-effects -->
+    <script type="module">
+        import { ghostCursor } from "https://unpkg.com/cursor-effects@latest/dist/esm.js";
+
+        new ghostCursor({
+            image:"knight.png",
+            lifeSpan:15
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="boxlol"> 
+
+        <div class="container">
+            <div class="bbbb">
+                * hi! the name's <span class="col">kommit</span>! kommit the- 
+                <span class="small">yknow this is a bad bit actually</span>
+                <br>* welcome to my corner in the internet :)
+            </div>
+            <div class="bbbb">
+                * i made this site cause i wanted my own personal space without limitations (like carrd, strawpage)
+                and lowkey to also use my html knowledge i learned in class xd
+            </div><br>
+
+            <div class="tab">
+                <button class="tablinks" onclick="openCity(event, 'about')"><img src="buttons/about.png" title="more about me"></button>
+                <button class="tablinks" onclick="openCity(event, 'projects')"><img src="buttons/projects.png" title="things i worked on"></button>
+                <button class="tablinks" onclick="openCity(event, 'likes')"><img src="buttons/likes.png" title="my likes"></button>
+                <button class="tablinks" onclick="openCity(event, 'music')"><img src="buttons/music.png" title="my music taste"></button>
+                <button class="tablinks"><a href="characters/"><img src="buttons/characters.png" title="my characters"></a></button>
+                <button class="tablinks" onclick="openCity(event, 'blinkies')"><img src="buttons/blinkies.png" title="blinkies/extras"></button>
+                <button class="tablinks"><a href="/"><img src="buttons/spare.png" title="spare/flee (home)"></a></button>
+            </div>
+
+            <div class="scrollable">
+                <div id="placeholder" class="tabcontent" style="display: block">
+                    <ul>
+                        <li>See that <span class="col">CURSOR</span>, User? That's your SOUL, the culmination of your being!</li><br>
+                        <li>Within, it holds your WILL... your COMPASSION...
+                        <br>...and the FATE of the world.</li><br>
+                        <li>Guide your CURSOR towards any of those buttons above!</li><br>
+                        <li>Each one shows something different, so experiment as you please!</li><br>
+                        <br><br>
+                        <img src="lancer.gif" alt="YOU JUST GOT LANCERED" onclick="playSound('splat.mp3')">
+                        <script src="soundscript.js"></script>
+                    </ul>
+                </div>
+
+                <div id="about" class="tabcontent">
+                    <h3 class="titlething">ABOUT ME</h3>
+                    <ul>
+                        <li>hi there! as stated earlier, my name is kommit! it's pronounced as 'commit' in case you were wondering
+                        <br>a few of my friends call me comet, so if you like that, go ahead! </li>
+                        <li>im a very introverted + shy AND forgetful guy that struggles heavily with talking to people &lt;/3
+                        <span class="small"><br>i am procrastination incarnate</li>
+                        <br>
+                        <li>i like creating things - more specifically art, music, and coding (html + beginner python)
+                        <br>drawing is still my fav out of my big three though
+                        <li>ive dabbled in 2d animation and 3d animation+renders as well (with mineimator/blockbench),
+                            and would love to pick up blender and godot soon :)
+                        <br><span class="small">making a 3d model out of my character(s) is a goal of mine!</span></li>
+                        <br>
+                        <li>what else do i even write here... im not very interesting</li>
+                        <li>my favourite colour is blue + a lot of the colder colours</li>
+                        <li>cats are also really cute</li>
+                    </ul>
+                </div>
+                
+                <div id="projects" class="tabcontent">
+                    <h3 class="titlething"><span class="small">touhou</span> PROJECTS</h3>
+                    <ul>
+                        <li>check out all the stuff ive worked on!
+                        <br><span class="small">most of these will be friday night funkin related as i had a huge brainrot over it a couple years ago lmfao</li></span>
+                        <br>
+                        <h4 class="thing">incredibox: kommix</h4>
+                        <a target="_blank" href="https://scratch.mit.edu/projects/1091177982/"><img class="clickable bigimg" src="images/thumb-scratch.png"></a>
+                        <li>this is a small scratch project i worked on back in 2024 featuring me and my friends' characters as incredibox polos!</li>
+                        <li>i used a template, but i made the sounds and the art myself!
+                        <br><span class="small">excuse the jank, it was my first time doing something on scratch + ive never played incredibox when i made this lol</li></span>
+                        <br>
+                        <h4 class="thing">kommit's ultrabox sample repository</h4>
+                        <a target="_blank" href="/ultrabox/"><img class="clickable bigimg" src="images/thumb-ultrabox.png"></a>
+                        <li>also known as UB:SR, this is a page full of samples originally meant for my friend Hyphen who uses beepbox/ultrabox a lot!</li>
+                        <li>after posting it on reddit, turns out this page had more use than i thought so i update it when i can</li>
+                        <li>currently has 19 pages of sounds! thats probably 150+ audios i think!!</li>
+                        <br>
+                        <h4 class="thing">friday night funkin mods</h4>
+                        <li>theres a lot. there would be <i>double</i> if i was less shy and posted more of my shit online.</li>
+                        <li>the pause script also blew up and is used in a buncha mods that you may know :o</li>
+                        <div class="bananacontain">
+                            <a href="https://gamebanana.com/mods/459447"><img class="clickable banana" src="https://gamebanana.com/mods/embeddables/459447?type=medium"/></a>
+                            <a href="https://gamebanana.com/mods/586261"><img class="clickable banana" src="https://gamebanana.com/mods/embeddables/586261?type=medium"/></a>
+                            <a href="https://gamebanana.com/tools/16857"><img class="clickable banana" src="https://gamebanana.com/tools/embeddables/16857?type=medium"/></a>
+                            <a href="https://gamebanana.com/tools/19292"><img class="clickable banana" src="https://gamebanana.com/tools/embeddables/19292?type=medium"/></a>
+                            <a href="https://gamebanana.com/tools/13448"><img class="clickable banana" src="https://gamebanana.com/tools/embeddables/13448?type=medium"/></a>
+                            <a href="https://gamebanana.com/mods/441050"><img class="clickable banana" src="https://gamebanana.com/mods/embeddables/441050?type=medium"/></a>
+                            <a href="https://gamebanana.com/mods/436896"><img class="clickable banana" src="https://gamebanana.com/mods/embeddables/436896?type=medium"/></a>
+                            <a href="https://gamebanana.com/tools/12970"><img class="clickable banana" src="https://gamebanana.com/tools/embeddables/12970?type=medium"/></a>
+                            <a href="https://gamebanana.com/mods/448008"><img class="clickable banana" src="https://gamebanana.com/mods/embeddables/448008?type=medium"/></a>
+                            <a href="https://gamebanana.com/mods/598244"><img class="clickable banana" src="https://gamebanana.com/mods/embeddables/598244?type=medium"/></a>
+                            <a href="https://gamebanana.com/mods/449476"><img class="clickable banana" src="https://gamebanana.com/mods/embeddables/449476?type=medium"/></a>
+                            <a href="https://gamebanana.com/mods/490378"><img class="clickable banana" src="https://gamebanana.com/mods/embeddables/472839?type=medium"/></a>
+                        </div><br><br>
+                        <h4 class="thing">collaborations</h4>
+                        <li>i am the artist of Static in this huge fnf subreddit art collab! <br>
+                            <iframe src="https://www.reddit.com/embed/r/FridayNightFunkin/comments/1353h35/?theme=dark" style="border-radius: 8px; overflow: hidden;" width="100%" height="365"
+                            loading="lazy" frameborder="0" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin allow-popups"></iframe><br></li>
+                        <li>i also appeared twice in a channel called Object Show Music that's basically SiivaGunner but for OSC songs</li>
+                        <li>i made Spow (Unreleased) that's Whistle (cause it was trending at that time) and then hfjONE's Title intro as undertale :]</li><br>
+                        <li>song collabs with my good friend Hyphen :)</li>
+                        <div class="bananacontain">
+                            <iframe width="300" height="165" src="https://www.youtube-nocookie.com/embed/HgzNRgAZcvc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+                            encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                            referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin allow-presentation allow-popups allow-forms"></iframe> <br>
+                            <iframe width="300" height="165" src="https://www.youtube-nocookie.com/embed/wo0FFbLJoNM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+                            encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                            referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin allow-presentation allow-popups allow-forms"></iframe>></iframe></div><br>
+                        <li>song collab with moon &lt;3
+                            <iframe data-testid="embed-iframe" sandbox="allow-scripts allow-same-origin allow-forms allow-popups" referrerpolicy="no-referrer" credentialless
+                            src="https://open.spotify.com/embed/track/43G0Sgkx8DGNL7XUjNIavj" width="100%" height="112" frameBorder="0" allow="clipboard-write; encrypted-media;" loading="lazy"></iframe>
+                        </li>
+                        <li>here's <a href="https://www.youtube.com/@funkinosc_official">FunkinOSC Official</a>, the official channel of a mod i was director on! it's run by a friend of mine, starry :D</li>
+                    </ul>
+                </div>
+
+                <div id="likes" class="tabcontent">
+                    <h3 class="titlething">things i like</h3>
+                    <ul>
+                        <li>i like a lotta stuff and these are games that i still like to this day!
+                        <br>i wont list EVERYTHING cause thats seriously too much :')
+                        <br> <ul>
+                            <li>undertale/deltarune</li>
+                            <li>ultrakill</li>
+                            <li>balatro</li>
+                            <li>friday night funkin</li>
+                            <li>hollow knight + silksong</li>
+                            <li>minecraft</li>
+                            <li>persona 3 and 5</li>
+                            <li>portal 1 and 2</li>
+                            <li>rhythm games (adofai, rhythm doctor, jsab, etc...)</li>
+                            <li>webfishing</li>
+                            <li>exit 8 and platform 8</li>
+                            <li>...and more!</li>
+                            </ul>
+                        </li><br>
+                        <li>other stuff i like that's not just games lmao
+                        <br> <ul>
+                            <li>hfjone</li>
+                            <li>severance</li>
+                            <li>black mirror</li>
+                            <li>windows 7 and winxp</li>
+                            <li>liminal spaces</li>
+                            <li>listening to music !!!</li>
+                            <li>cats (including furry cats)</li>
+                            <li>protogens and robots in general</li>
+                            <li>movies</li>
+                            <li>old internet and old tech</li>
+                            <li>toki pona (cant speak but its interesting)</li>
+                            <li>learning about how things work fascinates me a lot</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="music" class="tabcontent">
+                    <h3 class="titlething">my music taste</h3>
+                    <ul>
+                        <li>my music taste is honestly all over the place, but in general,
+                        <br>whatever i like, i listen to it! genre or who made it doesnt matter much for me</li><br> 
+                        <li>speaking of playlists, i have three "main" playlists;
+                            <ul>
+                            <li>i have an "everything" playlist where every song i like goes in,</li>
+                            <li>a more refined playlist with songs that are more my taste,</li>
+                            <li>then finally my top favourites that i really really love :]</li>
+                            </ul>
+                        </li><br> 
+                        <li>from what ive gathered however, i like instrumental stuff more than songs with vocals!
+                        <span class="small"><br>i basically grew up listening to game soundtracks so that  makes sense lmao</span></li><br>
+                        <li>instead of yapping and trying to make myself make sense, heres my everyday playlist</li>
+                        <iframe sandbox="allow-scripts allow-same-origin allow-forms allow-popups" referrerpolicy="no-referrer" credentialless
+                        style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1zbqGVlsuNenBkxiK8cB1N?theme=0"
+                        width="100%" height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy" data-testid="embed-iframe" allowfullscreen="" frameBorder="0"></iframe>
+                </div>
+
+                <div id="blinkies" class="tabcontent">
+                    <h3 class="titlething">silly stuff</h3>
+                    <div class="bananacontain">
+                        <img src="blinkies/a5.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/blood-is-fuel-blinkie-borderless.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/h6.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/joker-poker-balala.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/b45.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/i3.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/d56.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/Blinkie-Glow.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/press-alt-f4-blinkie-green.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/d22.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/e48.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/windowsxp.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/idreaminpixels.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/e83.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/bubblewrap.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/i-love-the-moon-blinkie.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/RADIOTROPHICBLUESCREENED.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/starstruck.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/hatepopups.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/endermanblinkie.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/deviantart-968847179-Not-human-blinkie.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/f23.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/2a5e175664c82d0faef0c49f3227c78424dbb4bc.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/8bf39817db08834777e16fa5d820a8afcb77f542.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/0023-trans-pride.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/v26.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/g44.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/g63.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/x45.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/tumblr-b69e62d06ed13ef22ef7e669a241df9b-37c96698-250.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/x38.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/click-click-click.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/z14.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/press-any-key-to-continue.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/queen-hi.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/undertale.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/blinkie-Buddha.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/fuckyou.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/dos-3.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/f32b822853d9e8fb9bd78d4c56d97ab47ee0e7e8.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/f49aeb28c6307fad043affa642979c6774c75bc1.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/h57.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/i7.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/l16.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/m14.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/winamp.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/z20.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/x30.gif" loading="lazy" draggable="false">
+                    </div><br>
+                    <div class="bananacontain">
+                        <img src="blinkies/1chrome.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/1firefox4.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/2minecraft.png" loading="lazy" draggable="false">
+                        <img src="blinkies/gay-people.png" loading="lazy" draggable="false">
+                        <img src="blinkies/3computer.jpg" loading="lazy" draggable="false">
+                        <img src="blinkies/4.jpg" loading="lazy" draggable="false">
+                        <img src="blinkies/lie.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/V1.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/button-Gears.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/1paint.gif" loading="lazy" draggable="false">
+                        
+                        <img src="blinkies/DDTpFr1.jpg" loading="lazy" draggable="false">
+                        <img src="blinkies/nap-time.png" loading="lazy" draggable="false">
+                        <img src="blinkies/mobile-friendly.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/white-cat-irl.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/tetom.gif" loading="lazy" draggable="false">
+                    </div><br>
+                    <div class="bananacontain">
+                        <img src="blinkies/load.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/penis.jpg" loading="lazy" draggable="false">
+                        <img src="blinkies/sadhorse.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/typos.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/undertale2.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/ilovesleeping.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/htmlsucks.png" loading="lazy" draggable="false">
+                        <img src="blinkies/83312634-P6-I.png" loading="lazy" draggable="false">
+                        <img src="blinkies/cooleronline.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/a24.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/kitty.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/image05.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/b77.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/ctrlz.png" loading="lazy" draggable="false">
+                        <img src="blinkies/bad-at-ultrakill-stamp.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/brick.jpg" loading="lazy" draggable="false">
+                        <img src="blinkies/dogcar.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/59366976-9-VD.png" loading="lazy" draggable="false">
+                        <img src="blinkies/e44.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/fucj.jpg" loading="lazy" draggable="false">
+                        <img src="blinkies/gayshit.png" loading="lazy" draggable="false">
+                        <img src="blinkies/83311995-vwt.png" loading="lazy" draggable="false">
+                        <img src="blinkies/83312626-0f-S.png" loading="lazy" draggable="false">
+                        <img src="blinkies/83312429-Qw-O.png" loading="lazy" draggable="false">
+                        <img src="blinkies/I7WJ5hU.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/ilovetoeatstamps.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/j5.png" loading="lazy" draggable="false">
+                        <img src="blinkies/nononono.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/nothuman.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/oldweb.png" loading="lazy" draggable="false">
+                        <img src="blinkies/83368748-wky.png" loading="lazy" draggable="false">
+                        <img src="blinkies/spamHelp.png" loading="lazy" draggable="false">
+                        <img src="blinkies/spongebob.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/believe.png" loading="lazy" draggable="false">
+                        <img src="blinkies/tumblr_inline_pe6lvyKkO11v11djx_1280.gif" loading="lazy" draggable="false">
+                        <img src="blinkies/tumblr-e07bba59ca83f95645ad32fcc9014e03-9800f770-100.png" loading="lazy" draggable="false">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <script>
+        function openCity(evt, cityName) {
+        // Declare all variables
+        var i, tabcontent, tablinks;
+
+        // Get all elements with class="tabcontent" and hide them
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+
+        // Get all elements with class="tablinks" and remove the class "active"
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        // Show the current tab, and add an "active" class to the button that opened the tab
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+        }
+        // we3schools solos
+    </script>
+
+    </body>
+</html>

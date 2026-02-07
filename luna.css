@@ -1,0 +1,210 @@
+html {
+    font-family: 'Source Code Pro', Courier, monospace;
+    overflow-x: hidden;
+    scrollbar-color: #391669 #000000;
+
+    background-color: #000000;
+    background-image: url("stargazing.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+
+body {
+    font-size: 14px;
+    color:#d3d1ff;
+    max-width: 60%;
+}
+main {
+    overflow-x: hidden;
+    max-height: 70vh;
+    overflow: auto;
+}
+
+.toptainer {
+    margin: 1%;
+    padding: 20px 0px 0px 20px;
+}
+
+.fuckshit a {
+    color: #00ff91;
+}
+.fuckshit a:hover {
+    text-shadow: 0 0 5px #00ff91;
+}
+
+.ass {
+    margin: 1%;
+    padding: 20px;
+
+    border: 3px solid #391669;
+    border-radius: 5px;
+
+    background:#1a0b3379;
+    backdrop-filter: blur(5px);
+}
+
+.gay{
+    user-select: none;
+    font-size: 40px;
+    font-weight: bolder;
+    color: white;
+    background: repeating-linear-gradient(-45deg, red 0%, yellow 7.14%, rgb(0,255,0) 14.28%,
+                rgb(0,255,255) 21.4%, cyan 28.56%, blue 35.7%, magenta 42.84%, red 50%);
+    background-size: 600vw 600vw;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: slide 10s linear infinite forwards;
+}
+@keyframes slide {
+    0%{
+      background-position-x: 0%;
+    }
+    100%{
+      background-position-x: 600vw;
+    }
+}
+
+.splash{
+    max-width: 100%;
+    display: block;
+    line-height: 1.6;
+    height: auto;
+
+    font-family: 'Minecraftia', 'Source Code Pro', monospace;
+    text-decoration: none;
+    color: #6cddff;
+
+    margin-bottom: 20px;
+    padding: 6px;
+
+    user-select: none;
+    text-shadow: 2px 0 #0b0745, -2px 0 #0b0745, 0 2px #0b0745, 0 -2px #0b0745,
+    1px 1px #0b0745, -1px -1px #0b0745, 1px -1px #0b0745, -1px 1px #0b0745;
+}
+#randomsplash:hover {
+    text-shadow: 0 0 7px #00ddff;
+    cursor: pointer;
+}
+
+nav {
+    font-size: 14px;
+
+    position: relative; 
+    z-index: 1;
+    margin: 0px 12px;
+    padding: 0px 10px;
+}
+nav a {
+    color:#d3d1ff;
+    text-decoration: none;
+}
+nav a:hover {
+    color:#ffffff;
+    text-shadow: 0 0 5px #00ddff;
+}
+
+.bigtext {
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 170px;
+    
+    background-color: #130e2fb7;
+    border: 3px solid #391669;
+    border-radius: 5px;
+
+    top: 100%; 
+    left: 0;
+}
+.dropdown-content a {
+    color:#d3d1ff;
+    font-size: 14px;
+    padding: 6px 10px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {color: #ffffff; background-color: #391669; text-shadow: 0 0 5px #00ddff;}
+.dropdown:hover .dropdown-content {display: block;}
+
+
+.tip{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.pfp {
+    display: block;
+    height: auto;
+    max-width: 175px;
+}
+.pfptext {
+    flex: 1;
+    font-size: 14px;
+}
+
+.theguy {
+    font-size: 26px;
+    color: #00ddff;
+    font-weight: bold;
+}
+.numberthing {
+    font-size: small;
+    color: #d3d1ff;
+    opacity: 0.7;
+}
+
+.clicktext {
+    opacity: 1;
+    font-size: small;
+    margin: 0;
+    padding: 5px;
+}
+
+.songrando {
+    display: grid;
+    align-items: center;
+    text-align: center;
+    justify-items: center;
+
+    margin: 0 auto;
+    max-width: 30%;
+}
+.songrando button {
+    font-family: 'Source Code Pro', Courier, monospace;
+    color:#d3d1ff;
+
+    padding: 10px 30px 10px 30px;
+    margin: 0 auto;
+
+    border: 3px solid #391669;
+    border-radius: 5px;
+
+    background:#1a0b3379;
+}
+.songrando button:hover {
+    color:#ffffff;
+    text-shadow: 0 0 5px #00ddff;
+    background:#391669;
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    body {
+        max-width: 100%;
+    }
+}

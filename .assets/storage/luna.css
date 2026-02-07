@@ -1,0 +1,62 @@
+html {
+    font-family: 'Source Code Pro', Courier, monospace;
+
+    overflow-x: hidden;
+    background-color: #000000;
+
+    background-image: url('grid.png');
+    background-attachment: fixed;
+    background-position: center;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.OS {
+    font-size: xx-small;
+    background-color: #000000;
+    color: #ffffff;
+    white-space: pre-line;
+    max-width: fit-content;
+    width: 40%;
+}
+
+
+.container, nav, footer {
+    width: 100%;
+    max-width: 1100px;
+    margin: 10px auto;
+    box-sizing: border-box;
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* frfr */
+    gap: 20px;
+    
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+.container {
+    padding: 3%;
+    background-color: #ffffff;
+    color: white;
+}
+nav {
+    background-color: #ff0000;
+    padding: 3%;
+}
+footer {
+    background-color: #000dff;
+    padding: 3%;
+}
+
+.box {
+    background-color: #09ff00;
+    color: black;
+    padding: 20px; 
+}

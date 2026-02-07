@@ -1,0 +1,82 @@
+html {
+    font-family:  monospace;
+    font-size: 15px;
+
+    background-color: #92bfff;
+    background-image: url("sky.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+    overflow: hidden;
+}
+
+body {
+    color: #ffffff;
+    text-shadow: 0 0 5px #ffffff;
+    text-align: center;
+}
+
+@font-face {
+    font-family: 'winxp'; src: url('/.assets/fonts/winxpttf.ttf');
+}
+
+.path {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 25vh;
+
+    margin: 0 auto;
+    max-width: 30%;
+}
+
+.doors {
+    display: flex;
+    align-items: last baseline;
+    text-align: center;
+    justify-content: center;
+
+    gap: 15%;
+    height: 65vh;
+}
+.doors img {
+    width: 100px;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+.tooltiptext {
+    visibility: hidden;
+    width: 130px;
+    bottom: 105%;
+    left: 50%;
+    margin-left: -65px;
+    background-color: #0095ff6c;
+    color: #ffffff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+@media (max-width: 768px) {
+    html {
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+    }
+    .doors {
+        margin: 0px 20px 0px 20px;
+        padding: 20px;
+        height: 60vh;
+    }
+}

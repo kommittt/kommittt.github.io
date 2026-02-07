@@ -1,274 +1,94 @@
-
-
-window.onload = fetchGuestBook_Entries();
+function tConvert(time) { return time; }
+function encodeHTML(str) {
+    if (!str) return "";
+    return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+}
 
 function fetchGuestBook_Entries() {
+    fetch(`https://opensheet.elk.sh/${Google_Form_ID}/${Google_Form_Name}`)
+    .then((res) => res.json())
+    .then((data) => {
+        let sortedInput = data.reverse();
+        let jsonContainer = document.getElementById("json");
+        if (!jsonContainer) return;
+        
+        jsonContainer.innerHTML = "";
 
-    // Fetching Spreadsheet JSON Data	
-    fetch(
-        `https://opensheet.elk.sh/${Google_Form_ID}/${Google_Form_Name}`
-    )
-        .then((res) => res.json())
-        .then((data) => {
+        for (var i = 0; i < sortedInput.length; i++) {
+            var timestamp = sortedInput[i].Timestamp || "";
+            var splitTime = timestamp.split(' ')[0] || "";
+            var splitTime_1 = timestamp.split(' ').pop() || "";
+            
+            let ConvertedTime = tConvert(splitTime_1);
+            let SantizeName = encodeHTML(sortedInput[i].Name || "Anonymous").replace(/[^\x00-\x7F]/g, "");
+            let SanitizeWebsite = encodeHTML(sortedInput[i].Email || "");
+            let SantizeResponses = encodeHTML(sortedInput[i].Guestbook_Entry || "").replace(/[^\x00-\x7F]/g, "");
 
-            // reversing JSON data to make things easier
-            let sortedInput = (data.reverse())
-
-
-
-            // Add 5 entries to main page
-            // ie; iterate 5 times
-            for (var i = 0; i < 7 && i < sortedInput.length; i++) {
-
-                // Split timestamp data
-                var splitTime = sortedInput[i].Timestamp.split(' ')[0];
-                var splitTime_1 = sortedInput[i].Timestamp.split(' ').pop();
-
-
-                // Work in Progress - Convert to 24 Hour
-                let ConvertedTime = tConvert(splitTime_1)
-
-                // Sanitize Data
-                let SantizeName = encodeHTML(sortedInput[i].Name)
-
-                let SanitizeWebsite = encodeHTML(sortedInput[i].Email)
-
-                let SantizeResponses = encodeHTML(sortedInput[i].Guestbook_Entry)
-
-                // Dis-allow unicode comments for spam 
-                SantizeName = SantizeName.replace(/[^\x00-\x7F]/g, "")
-
-                SantizeResponses = SantizeResponses.replace(/[^\x00-\x7F]/g, "")
-
-                // Add Entries To Main Section
-                document.getElementById("json").innerHTML += `
-					 <div class="entry">
+            jsonContainer.innerHTML += `
+            <div class="entry">
                 <div class="entry-info">
-                    <p><span class="author"> ${SantizeName}</span> | <a class="website" href="${SanitizeWebsite}">${SanitizeWebsite}</a> || <span class="date">${splitTime}</span> | <span class="time">${ConvertedTime}</span></p>
-                </div>
-                <div class="entry-text">
-                    <p>${SantizeResponses} </p>
-                </div>
-            </div>`
-            }
-
-
-            /// Adding all entries to all entry section
-
-            data.forEach((row) => {
-
-                // Sanitize Data
-                let SantizeResponses = encodeHTML(row.Guestbook_Entry)
-
-                let SantizeName = encodeHTML(row.Name)
-
-                // Dis-allow unicode comments for spam 
-                SantizeName = SantizeName.replace(/[^\x00-\x7F]/g, "")
-
-                SantizeResponses = SantizeResponses.replace(/[^\x00-\x7F]/g, "")
-
-                // Split timestamp data
-                var splitTime = row.Timestamp.split(' ')[0];
-                var splitTime_1 = row.Timestamp.split(' ').pop();
-
-
-                // Work in Progress - Convert to 24 Hour
-                let ConvertedTime = tConvert(splitTime_1)
-
-
-                document.getElementById("AllEntries_Content").innerHTML += `
-					 <div class="entry">
-                <div class="entry-info">
-                    <p><span class="author">${SantizeName}</span> | <span class="date">${splitTime}</span> | <span class="time">${ConvertedTime}</span></p>
+                    <p>
+                        <span class="author"> &lt;${SantizeName}&gt;</span>
+                        <a class="website" target="_blank" href="${SanitizeWebsite}">${SanitizeWebsite}</a>
+                        <span class="date">${splitTime}</span>
+                        <span class="time">${ConvertedTime}</span>
+                    </p>
                 </div>
                 <div class="entry-text">
                     <p>${SantizeResponses}</p>
                 </div>
-            </div>`
-
-            });
-        });
-
-
+            </div>`;
+        }
+    })
+    .catch(err => console.error("Error fetching guestbook:", err));
 }
 
+var swear_words_arr = ["nigger", "nigga", "niglet", "faggot", "retard", "tranny", "troon"];
 
-// On Submit - Validating Text Before Sending For Profanities
-var Gform = document.getElementById("gform")
-Gform.addEventListener('submit', (e) => {
-    validateRecaptcha();
-
-
-})
-
-// Validate Recaptcha
-function validateRecaptcha() {
-    var response = grecaptcha.getResponse();
-    if (response.length === 0) {
-        // if Captcha not passed - do no nothing. 
-        return false;
-    } else {
-        // if Captcha Passed - Validate Text For Swearing Etc. 
-        validate_text();
-        return true;
-    }
-}
-
-// Convert 24 hour timestamp to 12 hour format - Work in Progress
-
-// https://stackoverflow.com/questions/13898423/javascript-convert-24-hour-time-of-day-string-to-12-hour-time-with-am-pm-and-no
-
-function tConvert(time) {
-
-    return time; // return adjusted time or original string
-}
-
-
-
-
-var subscribeForm = document.getElementById("SendForm")
-
-/// Profanity Filter
-
-// Enter the words to be not allowed in form submission for Profanity Filter
-var swear_words_arr = new Array("tranny", "troon", "nigga", "niggas", "nigger", "niggers", "niglet", "retard", "retarded", "retards", "faggot", "faggy", "faggots");
-
-var swear_alert_arr = new Array;
-var swear_alert_count = 0;
-function reset_alert_count() {
-    swear_alert_count = 0;
-}
 function validate_text() {
-    reset_alert_count();
-    var compare_text = document.getElementById(GOOGLE_ENTRY_ID_Guestbook).value;
+    let swear_alert_arr = [];
+    let entryField = document.getElementById("entry.1675800829");
+    if (!entryField) return;
+
+    let compare_text = entryField.value.toLowerCase();
+    
     for (var i = 0; i < swear_words_arr.length; i++) {
-        for (var j = 0; j < (compare_text.length); j++) {
-            if (swear_words_arr[i] == compare_text.substring(j, (j + swear_words_arr[i].length)).toLowerCase()) {
-                swear_alert_arr[swear_alert_count] = compare_text.substring(j, (j + swear_words_arr[i].length));
-                swear_alert_count++;
-            }
+        if (compare_text.includes(swear_words_arr[i])) {
+            swear_alert_arr.push(swear_words_arr[i]);
         }
     }
-    var alert_text = "";
-    for (var k = 1; k <= swear_alert_count; k++) {
-        alert_text += "\n" + "(" + k + ")  " + swear_alert_arr[k - 1];
-    }
 
-    // if profanity is detected - show this message	 	
-    if (swear_alert_count > 0) {
+    if (swear_alert_arr.length > 0) {
+        alert("your message contains filtered words !!: " + swear_alert_arr.join(", "));
+    } else {
+        var Gform = document.getElementById("gform");
+        Gform.submit(); 
 
-        var subscribeForm = document.getElementById("SendForm")
-        // Fade out form to make things look nice
-        subscribeForm.setAttribute("style", "-webkit-animation: fadeOut 1s; animation: fadeOut 1s;  animation-fill-mode: forwards;");
-        // Hide the input form values	 
-        Gform.setAttribute("style", "display:none;");
-        // Show the user this message + the illegal character they used.
-        subscribeForm.innerHTML = `	<a class="close" onclick="ResetSwearForm();" href="#">&times;</a>
-<h1  style="text-align: center;
-    margin-top: 2em;">your entry will not be logged! \nyou cannot write these words:</h1> <p>${alert_text}</p>`
-        // Fade message in
-        subscribeForm.setAttribute("style", "-webkit-animation: fadeIn 1s; animation: fadeIn 1s;  animation-fill-mode: forwards;");
+        Gform.reset();
 
-
-    }
-    else  // if no profanities found - check if Captcha is complete
-    {
-
-
-
-        var response = grecaptcha.getResponse();
-        if (response.length === 0) { // if Captcha is not complete
-            // do nothing
-
-        } else { // add values to guestbook
-
-            document.gform.submit();
-
-        }
-
-
-        // Timeout is needed for form to properly submit with animation
-
-        setTimeout(function () {
-
-
-
-            // Hide the form values 
-            Gform.setAttribute("style", "display:none;");
-            var subscribeForm = document.getElementById("SendForm")
-
-
-            // Show the user message their entry has been added
-            subscribeForm.innerHTML = `<a class="close" href="#" style="color: #29e29c;">[ &times; ]</a>
-            <h2 style="text-align: center; margin-top: 2em; color: #cddbe2;">your entry has been logged! thank you for signing!</h2>`
-
-        }, 500);
+        setTimeout(() => {
+            var sendFormContainer = document.getElementById("SendForm");
+            sendFormContainer.innerHTML = `
+                <div class="pagecontent" style="height:85%;">
+                    <h2 style="color: #000000; ">entry submitted!</h2>
+                    <p>thank you for signing my guestbook!</p>
+                    <button class="form-button" onclick="location.reload()">write another?</button>
+                </div>`;
+        }, 100);
     }
 }
-window.onload = reset_alert_count;
 
-// After profanity message is shown - we need to reset it to allow user to try again
-
-/// ie : Reset form after showing user message of violation
-var subscribeForm = document.getElementById("SendForm")
-
-function ResetSwearForm() {
-
-
-    // Fade out form to make things look nice
-    subscribeForm.setAttribute("style", "-webkit-animation: fadeOut 1s; animation: fadeOut 1s;  animation-fill-mode: forwards;");
-
-
-    subscribeForm.innerHTML = ` <h1>Sign The Guestbook</h1>
-		<a class="close" href="#">&times;</a>
-		<div class="content">
-      <label style="display: block;
-    text-align: center;" class="aterisk_before" for="gform"> indicates a required field</label>
-      <br>
-		
-    <form name="gform" id="gform" enctype="text/plain" action="${Google_Form_Link}" target="hidden_iframe">
+document.addEventListener('DOMContentLoaded', () => {
+    fetchGuestBook_Entries();
     
-    
-    
-    
-     
-  
-    
-       <label for="${GOOGLE_ENTRY_ID_Name}"  class="aterisk_after">Name </label>
-      
-        <input class="form-element short" type="text" name="${GOOGLE_ENTRY_ID_Name}" id="${GOOGLE_ENTRY_ID_Name}" placeholder="John Doe." style="background: #5EC6C8;" required>
-      
-        <label for="${GOOGLE_ENTRY_ID_Email}">GitHub Username</label>
-      
-   
-        <input class="form-element short" type="text" name="${GOOGLE_ENTRY_ID_Email}" id="${GOOGLE_ENTRY_ID_Email}" placeholder="MarketingPip" style="background: #5EC6C8;">
-      
-   <label for="${GOOGLE_ENTRY_ID_Guestbook}"  class="max-length">Guestbook Entry</label>
-      
-      <textarea class="form-element" name="${GOOGLE_ENTRY_ID_Guestbook}" id="${GOOGLE_ENTRY_ID_Guestbook}" rows="5" cols="30" oninvalid="this.setCustomValidity('You must sign the guestbook')"
-  oninput="this.setCustomValidity('')"  maxlength="128" placeholder="Enter Your Message Here" required></textarea>
-      
-         <label for="g-recaptcha"  class="aterisk_after">Captcha</label>      
-   <div class="g-recaptcha"
-       data-sitekey="${CaptchaKey}"></div> 
-      
-        <input class="form-button" type="submit" value="Submit">
-        <input class="form-button" type="reset" value="Reset Form">
- 
-    </form>
-		</div>
-	</div>
-</div> 
-</div>
-     
-	     
-`
+    var Gform = document.getElementById("gform");
+    if (Gform) {
+        Gform.addEventListener('submit', function(e) {
+            e.preventDefault();
+            validate_text();
+        });
+    }
+});
 
-    subscribeForm.setAttribute("style", "-webkit-animation: fadeIn 1s; animation: fadeIn 1s;  animation-fill-mode: forwards;");
-}
-
-// Santize Input - Basic XSS filter 
-
-function encodeHTML(sanizitedInput) {
-    return sanizitedInput.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
-}
+// unfortunately had to use ai for this js because i was getting sick and tired :/ sorry gang i aint smart at all and ill admit it
+// maybe one day once i actually learned js properly ill recode with my own two hands but not now :')

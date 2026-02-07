@@ -1,0 +1,81 @@
+
+html {
+    
+    scrollbar-color: #81a2d4 #0c091e;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Sometype Mono', sans-serif !important;
+    background-color: #0c091e !important;
+    padding: 10px;
+}
+
+h3 {
+    text-align: center;
+    color: #81a2d4 !important;
+    text-shadow: 0 0 5px #1d2357;
+}
+
+iframe {
+    overflow: hidden;
+    border: #0c091e;
+}
+
+.sidebar {
+    max-height: 96vh;
+    overflow: auto;
+    padding: 20px;
+    scrollbar-color: #81a2d4 #0e132d;
+    border: 3px solid #0e132d;
+}
+
+.img-fluid {
+    margin-bottom: 5px;
+    align-content: center;
+    max-height: 500px;
+}
+
+
+.waow {
+    display: block; /* this is actually so stupid that you need to add this if i dont want to add a p on top of it */
+    text-align: center;
+    font-size: small;
+    margin-bottom: 10px;
+
+    color: #6266c9;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+a:hover {
+    color: #81a2d4;
+
+    text-shadow: 0 0 5px #81a2d4;
+}
+
+@media (max-width: 768px) {
+    .responsive-iframe {
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 160%;
+    }
+    .sidebar {
+        max-height: 40vh;
+        margin-bottom: 30px;
+    }
+}
+
+img {
+    user-select: none;
+}
+ 
+
+/* 
+#81a2d4
+#0e132d
+#6266c9
+#1d2357
+*/

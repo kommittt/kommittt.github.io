@@ -1,0 +1,120 @@
+/* FONTS FONTS FONTS FONTS FONTS FONTS FONTS FONTS FONTS FONTS FONTS FONTS FONTS FONTS */
+@font-face {
+    font-family: 'determination'; src: url('/.assets/fonts/DeterminationSansWeb.ttf');
+}
+.determination {
+    font-family: "determination", 'Minecraftia', 'Montserrat', sans-serif;
+    font-size: x-large;
+    font-style: normal;
+    color: white;
+    text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
+             1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
+}
+
+@font-face {
+    font-family: 'utsans'; src: url('/.assets/fonts/UndertaleSans.ttf');
+}
+.utsans {
+    font-family: "utsans", 'Minecraftia', 'Montserrat', sans-serif;
+    font-size: x-large;
+    text-transform: lowercase;
+    font-style: normal;
+    color: white;
+    text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
+    1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
+}
+
+@font-face {
+    font-family: 'utpapyrus'; src: url('/.assets/fonts/UndertalePapyrus.ttf');
+}
+.utpapyrus {
+    font-family: "utpapyrus", 'Minecraftia', 'Montserrat', sans-serif;
+    font-size: x-large;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
+    1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
+}
+
+@font-face {
+    font-family: 'dealer'; src: url('/.assets/fonts/Fake\ Receipt.otf');
+}
+.dealer {
+    font-family: "dealer", 'Minecraftia', 'Montserrat', sans-serif;
+    font-size: normal;
+    text-transform: uppercase;
+    color: rgb(206, 171, 114);
+    text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
+    1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
+}
+
+@font-face {
+    font-family: 'vcr'; src: url('/.assets/fonts/VCR_OSD_MONO_1.001.ttf');
+}
+.vcr {
+    font-family: "vcr", 'Minecraftia', 'Montserrat', sans-serif;
+    font-size: larger;
+    text-transform: uppercase;
+    color: rgb(255, 93, 93);
+    text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
+    1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
+}
+
+@font-face {
+    font-family: 'omori'; src: url('/.assets/fonts/OMORI_GAME2.ttf');
+}
+.omori {
+    font-family: "omori", 'Minecraftia', 'Montserrat', sans-serif;
+    font-size: xx-large;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
+    1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
+}
+
+@font-face {
+    font-family: 'balatro'; src: url('/.assets/fonts/balatro.ttf');
+}
+.balatro {
+    font-family: "balatro", 'Minecraftia', 'Montserrat', sans-serif;
+    font-size: large;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
+    1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
+}
+
+@font-face {
+    font-family: 'winxp'; src: url('/.assets/fonts/winxp.otf');
+}
+.winxp {
+    font-family: "winxp", 'Minecraftia', 'Montserrat', sans-serif;
+    font-size: xx-large;
+    line-height: 1px;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
+    1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
+}
+
+@font-face {
+    font-family: 'ggsans'; src: url('/.assets/fonts/ggsansmed.ttf');
+}
+.ggsans {
+    font-family: "ggsans";
+    font-size: large;
+    font-style: normal;
+}
+
+.normalfont {
+    font-family: 'Montserrat', sans-serif;
+    font-size: large;
+    color: rgb(255, 0, 0);
+    text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
+    1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
+}
+
+.comicsans {
+    font-family: "Comic Sans MS", 'Minecraftia', 'Montserrat', sans-serif;
+    font-size: x-large;
+    text-transform: lowercase;
+    font-style: normal;
+}
+/* FONTS FONTS FONTS FONTS FONTS FONTS FONTS FONTS FONTS FONTS FONTS FONTS FONTS FONTS */

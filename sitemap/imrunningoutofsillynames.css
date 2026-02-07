@@ -1,0 +1,105 @@
+html {
+    color: aliceblue;
+
+    font-family: 'winxp', Courier, monospace;
+
+    background: #000000;
+    background-image: url('bg_back.png');
+    background-repeat: none;
+    background-size: cover;
+    background-attachment: fixed;
+}
+@font-face {
+    font-family: 'winxp'; src: url('/.assets/fonts/winxp.otf');
+}
+
+.boc {
+    width: 80%;
+    margin: auto;
+    text-shadow: #022422 0px 5px;
+}
+.container{
+    float: left;
+    margin: auto;
+
+    width: 50%;
+    height: 60%;
+    padding: 10px;
+}
+.bontainer{
+    padding-top: 5%;
+    float: right;
+    width: 40%;
+    height: 70%;
+}
+
+.titttle {
+    font-size: 30px;
+}
+p {
+    font-size: larger;
+    white-space: pre-line;
+    
+}
+i {
+    margin-right: 15px;
+    font-size: medium;
+    user-select: none;
+}
+.asd {
+    margin-bottom: 10px;
+    margin-left: 10px;
+    font-weight: bold;
+    color: #00ffd5;
+    font-size: larger;
+}
+
+a {
+    text-decoration: none;
+    color: aliceblue;
+    cursor: pointer;
+}
+a:hover {
+    color: #00ffd5;
+    text-decoration: underline;
+}
+
+.floating {
+    position: relative;
+    animation: float 5s ease-in-out infinite;
+}
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.shine1, .shine2 {
+    position: fixed;
+    user-select: none;
+    pointer-events: none;
+}
+.shine1{
+    animation: shine1anim 5s ease-in-out infinite;
+    z-index: 100;
+}
+@keyframes shine1anim {
+    50% {
+        opacity: 0;
+    }
+}
+.shine2 {
+    animation: shine2anim 4s ease-in-out infinite;
+}
+@keyframes shine2anim {
+    50% {
+        opacity: 0;
+    }
+}
+

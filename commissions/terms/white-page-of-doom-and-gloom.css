@@ -13,7 +13,7 @@ html body {
     margin: 2vw;
     padding: 1vw;
 
-    background-color: #0800223f;
+    background-color: rgba(6, 0, 25, 0.259);
 
     border: #000000;
     border-radius: 25px;
@@ -22,7 +22,14 @@ html body {
     border-color: #2b006f31;
 
     color: #bcc3ff;
+    transition: background-color 0.5s ease-in-out;
 }
+
+html body:hover{
+    background-color: rgba(6, 0, 25, 0.489);
+    transition: background-color 0.5s ease-in-out;
+}
+
 
 .page-header h1 {
     font-family: "Funnel Display", "calibri";
@@ -49,24 +56,6 @@ html body {
 .centered {
     text-align: center;
 }
-
-.col-md-6 {
-    padding: 1vw;
-    border: #000000;
-    border-radius: 15px;
-    border-width: 3px;
-    border-style: solid;
-    border-color: #2b006f;
-
-    gap: 10px;
-}
-
- /* Style the tab */
-.tab {
-    overflow: hidden;
-    margin: 1vw;
-}
-
 .uh {
     font-family: "Funnel Display", "calibri";
     font-size: large;
@@ -74,8 +63,32 @@ html body {
     color: #e0e3ff;
     letter-spacing: 2px;
 }
+a {
+    text-decoration: underline;
+    text-shadow: 0 0 5px rgb(43, 0, 255);
+}
 
-/* Style the buttons that are used to open the tab content */
+.col-md-6 {
+    padding: 1vw;
+    border-radius: 15px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #2b006f00;
+    transition: border-color 0.5s ease-in-out;
+}
+.col-md-6:hover {
+    border-radius: 15px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #2b006fb8;
+    transition: border-color 0.5s ease-in-out;
+}
+
+
+.tab {
+    overflow: hidden;
+    margin: 1vw;
+}
 .tab button {
     font-family: "Funnel Display", "calibri";
     color: #e0e3ff;
@@ -91,28 +104,22 @@ html body {
     transition: 0.3s;
     
 }
-
-/* Change background color of buttons on hover */
 .tab button:hover {
     color: #ca75ff;
     letter-spacing: 3%;
     text-decoration: underline;
 }
-
-/* Create an active/current tablink class */
 .tab button.active {
     color: #83ffb5;
     text-shadow: 0 0 10px #83ffb5;
     font-weight: bold;
 }
-
-/* Style the tab content */
 .tabcontent {
     font-family: 'Archivo', sans-serif;
     display: none;
     padding: 6px 12px;
     border-top: none;
-    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+    animation: fadeEffect 1s;
     margin: 1vw;
 }
 @keyframes fadeEffect {

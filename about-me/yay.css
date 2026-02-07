@@ -1,0 +1,165 @@
+html {
+    color: aliceblue;
+
+    font-family: 'determination', Courier, monospace;
+    font-size: 20px;
+    word-spacing: 3px;
+
+    background: #000000;
+    background-image: url('bg.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    scrollbar-color: #ffffff #000000;
+    
+    text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
+             1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
+}
+@font-face {
+    font-family: 'determination'; src: url('/.assets/fonts/DeterminationSansWeb.ttf');
+}
+@font-face {
+    font-family: 'deltasmall'; src: url('/.assets/fonts/deltasmall.otf');
+}
+
+.boxlol {
+    padding: 1%;
+    place-items: center;
+    display: grid;
+}
+
+.container{
+    width: 50%;
+}
+@media (max-width: 800px) {
+    .container {
+        width: 80%;
+    }
+    }
+/*
+.bontainer{
+    float: right;
+    margin: 0;
+
+    width: 40%;
+    height: 60%;
+    border: 5px solid #00ff00;
+}
+*/
+
+.scrollable {
+    height: 50vh;
+    width: auto;
+    overflow: scroll;
+    overflow-x: auto;
+    scrollbar-color: #ffffff #000000;
+}
+
+.tab {
+    overflow: hidden;
+}
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-left: 20px;
+}
+.tab button:hover {
+    filter: brightness(150%);
+}
+.tab button.active {
+    filter: brightness(250%);
+}
+.tabcontent {
+    display: none;
+    border-top: none;
+} 
+
+.col {
+    color: #ffff00;
+}
+.small {
+    font-family: 'deltasmall', 'determination', Courier, monospace;
+    font-size: 11px;
+    opacity: 0.50;
+}
+h3 {
+    font-size: xx-large;
+    color: #eeb4b3;
+    text-align: center;
+    margin: 0;
+    padding: 1%;
+    letter-spacing: 3px;
+    font-weight: normal;
+}
+img {
+    display: block;
+    margin: auto;
+    transition: all 0.25s ease-in-out;
+}
+.bigimg {
+    width: 60%;
+    height: 60%;
+}
+.clickable:hover {
+    filter: brightness(150%);
+    transition: all 0.25s ease-in-out;
+    box-shadow: 0px 0px 9px #ff7471;
+}
+.bananacontain {
+    flex-wrap: wrap;
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    align-items: center;
+    border-collapse: separate;
+}
+
+h4 {
+    font-size: x-large;
+    color: #eeb4b3;
+    text-align: center;
+    margin: 0;
+    padding: 1%;
+    letter-spacing: 3px;
+    font-weight: normal; 
+}
+
+ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+li {
+    margin-top: 5px;
+    padding-left: 1em;
+}
+li:before {
+    content: "*";
+    padding-right: 5px;
+}
+
+button img {
+    width: 150%;
+}
+
+a {
+    color: #00ffff;
+}
+
+.bbbb, .scrollable {
+    background-color: black;
+    border: 5px solid #ffffff;
+    padding: 2%;
+    margin: 1%;
+    transition: all 0.2s ease-in-out;
+}
+.bbbb:hover, .scrollable:hover {
+    background-color: #000000e2;
+}
+

@@ -6,18 +6,92 @@
 
     <title>toki pona "translator"</title>
     <meta name="description" content="a simple toki pona 'translator' that uses data from google sheets because i dont know how to work with toml files">
-    <link href="/images/ico-toki.png" rel="icon" type="image/x-icon">
+    <link href="ico-toki.png" rel="icon" type="image/x-icon">
+
+    <link rel="stylesheet" href="backgroundthing.css">
     <link rel="stylesheet" href="style.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script src="pspsounds.js"></script>
+    <script src="distractions.js" defer></script>
 </head>
 
-<body id="body">
+<!-- yes, i made it so that it looks similar to the psp theme :3 -->
+
+<audio autoplay id="startup">
+    <source src="/pona/psp/01 Startup.mp3" type="audio/ogg"> Your browser does not support the audio element.
+</audio>
+<script>
+    var audio = document.getElementById("startup");
+    audio.volume = 0.2;
+</script>
+
+<div class="wave nostalgia"></div>
+<div class="wave nostalgia"></div>
+<div class="wave nostalgia"></div>
+
+<div class="carousel nostalgia">
+    <div class="group">
+        <img src="psp/jan.png" class="waow">
+        <img src="psp/mun-1.png" class="waow">
+        <img src="psp/sitelen.png" class="waow">
+        <img src="psp/linluwi.png" class="waow">
+        <img src="psp/toki.png" class="waow">
+        <img src="psp/kijetesantakalu.png" class="waow">
+        <img src="psp/nasa.png" class="waow">
+        <img src="psp/nja.png" class="waow">
+        <img src="psp/suno.png" class="waow">
+        <img src="psp/suwi.png" class="waow">
+        <img src="psp/tawa.png" class="waow">
+        <img src="psp/awen.png" class="waow">
+    </div>
+    <div aria-hidden class="group">
+        <img src="psp/jan.png" class="waow">
+        <img src="psp/mun-1.png" class="waow">
+        <img src="psp/sitelen.png" class="waow">
+        <img src="psp/linluwi.png" class="waow">
+        <img src="psp/toki.png" class="waow">
+        <img src="psp/kijetesantakalu.png" class="waow">
+        <img src="psp/nasa.png" class="waow">
+        <img src="psp/nja.png" class="waow">
+        <img src="psp/suno.png" class="waow">
+        <img src="psp/suwi.png" class="waow">
+        <img src="psp/tawa.png" class="waow">
+        <img src="psp/awen.png" class="waow">
+    </div>
+</div>
+
+<!--
+<div class="psp">
+    <span id="datetime">-- -- --:--</span>
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+
+            const day = String(now.getDate()).padStart(2, "0");
+            const month = String(now.getMonth() + 1).padStart(2, "0");
+            const hour = String(now.getHours()).padStart(2, "0");
+            const minute = String(now.getMinutes()).padStart(2, "0");
+
+            document.getElementById("datetime").textContent =
+                `${day}/${month}  ${hour}:${minute}`;
+            }
+
+            updateDateTime();
+            setInterval(updateDateTime, 1000);
+    </script>
+</div>
+-->
+
+<body id="body" class="glint">
+    <!-- the shiny effect wont remove itself :( -->
     <header>
         <h1>toki pona "translator"</h1>
         <p class="luna">
             type a sentence (or word) in toki pona and it will return their definitions! it's up to you to interpret it and figure it out :p
+            <br><a href="#" id="fx-toggle" class="distract">[ disable distractions ]</a>
         </p>
         <noscript>
             <p style="color: red">needs javascript to work, pls enable</p>
@@ -29,8 +103,26 @@
     <main>
         <div class="another-container">
             <button id="viewmode">card view</button>
-            <input type="text" id="search-input" placeholder="type here!">
+            <input type="text" id="search-input" placeholder="type here!" onkeydown="typing(event)">
+            <script>
+                const typeSound = "/pona/psp/05 SFX Cursor.mp3";
+                const enterSound = "/pona/psp/09 SFX System Ok.mp3";
+                const backSound  = "/pona/psp/03 SFX Cancel.mp3";
 
+                function typing(e) {
+                    let audio;
+
+                    if (e.key === " ") {
+                        audio = new Audio(enterSound);
+                    } else if (e.key === "Backspace") {
+                        audio = new Audio(backSound);
+                    } else {
+                        audio = new Audio(typeSound);
+                    }
+                    audio.volume = 0.2;
+                    audio.play();
+                }
+            </script>
         </div>
         
         <div class="results-container" id="results-container">
@@ -40,8 +132,7 @@
 
     <footer>
         <!-- if youre using this on chrome mobile, it might be a bit broken and the viewmode toggle disappears (i dont know why, to be honest) -->    
-
-        <p>credits to <a href="https://nimi.li/">nimi.li</a>, <a href="https://github.com/lipu-linku/sona">lipu linku</a> and danya02 || font used is <a href="https://github.com/RetSamys/nishiki-teki-lili">nishiki-teki-lili</a></p>
+        <p>credits to <a href="https://nimi.li/">nimi.li</a>, <a href="https://github.com/lipu-linku/sona">lipu linku</a> and danya02 || font used is <a href="kreativekorp.com/software/fonts/sitelenselikiwen">sitelen kiwen asuki</a> || background effect credits to <a href="https://prismic.io/">prismic.io</a></p>
     </footer>
 
     <script src="fuckshitpiss.js"></script>

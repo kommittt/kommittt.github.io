@@ -12,6 +12,11 @@ html{
     overflow-x: hidden;
 }
 
+main {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
 .vignette {
     box-shadow: 0 0 200px rgba(0, 0, 0, 0.9) inset;
     opacity: 0.5;

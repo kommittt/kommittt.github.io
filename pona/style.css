@@ -8,7 +8,7 @@ html {
 i dont know if its different from using html? so im just going with the usual lmao */
 
 @font-face {
-    font-family: 'nishiki'; src: url('/.assets/fonts/sitelenselikiwenasuki.ttf');
+    font-family: 'nishiki'; src: url('/assets/fonts/sitelenselikiwenasuki.ttf');
 }
 
 .highlightOnHover {

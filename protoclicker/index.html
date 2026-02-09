@@ -31,18 +31,28 @@
             height: 95vh;
             text-align: center;
         }
-
         .oopsie p{
             padding: 25px;
             white-space: pre-line;
         }
-
         a{
             color: #ffffff;
             text-decoration: none;
         }
         a:hover{
             color: #ffff00;
+        }
+        img {
+            max-width: 50%;
+            margin-top: 20px
+        }
+        @media (max-width: 800px) {
+            img {
+                max-width: 85%;
+            }
+            .splash{
+                font-size: 11px;    
+            }
         }
     </style>
 
@@ -53,7 +63,7 @@
     <div class="oopsie">
         
         <p>
-        <img src="/assets/wippage/ray.gif" style="max-width: 50%;" alt="">
+        <img src="/assets/wippage/ray.gif" alt="">
         <span id="raydialogue"></span>
         
         this is currently a work in progress!

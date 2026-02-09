@@ -103,3 +103,26 @@ a:hover {
     }
 }
 
+@media (max-width: 800px) {
+    .boc, .container, .bontainer, body {
+        width: 100%;
+        float: none;
+        margin: 5px;
+        padding: 0;
+    }
+
+    .shine1, .shine2 {
+        width: 200%;
+        right: -200px;
+    }
+
+    .floating {
+        position: absolute;
+        top: 10%;
+        left: 0;
+        width: 100%;
+        opacity: 0.5;
+        pointer-events: none;
+        z-index: -1;
+    }
+}

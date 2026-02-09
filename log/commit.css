@@ -178,3 +178,10 @@ img{
     opacity: 0.5;
     box-shadow: 0px 0px 10px #adb7bc8f;
 }
+
+@media (max-width:728px) {
+    main {
+        margin-left: 1px;
+        margin-right: 1px;
+    }
+}

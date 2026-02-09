@@ -32,11 +32,6 @@ html {
 .container{
     width: 50%;
 }
-@media (max-width: 800px) {
-    .container {
-        width: 80%;
-    }
-    }
 /*
 .bontainer{
     float: right;
@@ -162,4 +157,26 @@ a {
 .bbbb:hover, .scrollable:hover {
     background-color: #000000e2;
 }
+
+@media (max-width: 720px) {
+    html {
+        font-size: 17px;
+    }
+    .small {
+        font-size: 9px;
+    }
+    .container {
+        width: 95%;
+    }
+    button img {
+        width: 100%;
+    }
+    .tab button {
+        margin-left: 2px;
+    }
+    .scrollable {
+        height: 60vh;
+    }
+}
+
 

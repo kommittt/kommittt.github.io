@@ -102,7 +102,6 @@ a {
     cursor: pointer;
     padding: 14px 16px;
     transition: 0.3s;
-    
 }
 .tab button:hover {
     color: #ca75ff;
@@ -141,4 +140,25 @@ li {
 li strong {
     color: #9175ff;
     text-shadow: 0 0 5px #8e75ffba;
+}
+
+@media (max-width: 800px) {
+    .page-header h1 {
+        font-size: 25px;
+    }
+    .textdesc {
+        font-size: 12px;
+    }
+    .tab {
+        margin: 0 auto;
+        text-align: center;
+    }
+    .tab button {
+        display: block;
+        font-size: medium;
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+        float: none;
+    }
 }

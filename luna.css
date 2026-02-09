@@ -207,4 +207,10 @@ nav a:hover {
     body {
         max-width: 100%;
     }
+    .splash{
+        font-size: 11px;    
+    }
+    .songrando {
+        max-width: 50%;
+    }
 }

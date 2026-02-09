@@ -88,6 +88,9 @@ h2, .wa, a{
     .containter{
         width: 80%;
     }
+    .wa{
+        font-size: 12px ;
+    }
 }
 
 button {

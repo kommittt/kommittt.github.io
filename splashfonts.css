@@ -13,6 +13,19 @@
 }
 
 @font-face {
+    font-family: 'tokipona'; src: url('../assets/fonts/sitelenselikiwenasuki.ttf');
+}
+.tokipona {
+    font-family: "tokipona", 'Minecraftia', monospace;
+    font-size: 20px;
+    line-height: 1;
+    font-style: normal;
+    color: white;
+    text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
+             1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
+}
+
+@font-face {
     font-family: 'utsans'; src: url('../assets/fonts/UndertaleSans.ttf');
 }
 .utsans {

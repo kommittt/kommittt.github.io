@@ -79,4 +79,8 @@ body {
         padding: 20px;
         height: 60vh;
     }
+
+    .path {
+        max-width: 100%;
+    }
 }

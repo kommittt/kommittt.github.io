@@ -17,6 +17,14 @@ h3 {
     text-shadow: 0 0 5px #1d2357;
 }
 
+.responses {
+    padding: 10px;
+    font-size: 14px;
+    color: #81a2d4;
+    border: 3px solid #1d2357;
+    gap: 10px;
+}
+
 iframe {
     overflow: hidden;
     border: #0c091e;
@@ -33,7 +41,7 @@ iframe {
 .img-fluid {
     margin-bottom: 5px;
     align-content: center;
-    max-height: 500px;
+    max-height: 150px;
 }
 
 
@@ -53,11 +61,7 @@ a:hover {
     text-shadow: 0 0 5px #81a2d4;
 }
 
-img {
-    user-select: none;
-}
-
-@media (max-width: 800px) {
+@media (max-width: 768px) {
     .responsive-iframe {
         top: 0;
         left: 0;
@@ -71,6 +75,11 @@ img {
         margin-bottom: 30px;
     }
 }
+
+img {
+    user-select: none;
+}
+ 
 
 /* 
 #81a2d4

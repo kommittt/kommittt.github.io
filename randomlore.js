@@ -42,7 +42,7 @@ function yowch() {
 var loreData = [
         /* kommit */
     {image: 1, char: `kommit`, yap: `kommit's eyes can glow (and also change colour), as you can see here
-                    <br> it usually happens when he's focused, experiencing heightened emotions, or just to show off!<br><br>
+                    <br> it usually happens when he's focused, experiencing heightened emotions, or just to aura farm<br><br>
                     although not useful for him, he can turn his eyes into a flashlight, lighting up wherever he looks. convenient!`},
     {image: 2, char: `kommit`, yap: `he really, REALLY likes silly billy.`},
     {image: 3, char: `kommit`, yap: `he naturally emits electrical signals and can charge wireless devices around him

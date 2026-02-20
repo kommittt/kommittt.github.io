@@ -40,10 +40,10 @@ function fetchGuestBook_Entries() {
             </div>`;
         }
     })
-    .catch(err => console.error("Error fetching guestbook:", err));
+    .catch(err => console.error("error fetching guestbook. erm... :", err));
 }
 
-var swear_words_arr = ["nigger", "nigga", "niglet", "faggot", "retard", "tranny", "troon"];
+var swear_words_arr = ["nigger", "nigga", "niglet", "faggot", "fag", "retard", "tranny", "troon"];
 
 function validate_text() {
     let swear_alert_arr = [];
@@ -89,6 +89,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
-
-// unfortunately had to use ai for this js because i was getting sick and tired :/ sorry gang i aint smart at all and ill admit it
-// maybe one day once i actually learned js properly ill recode with my own two hands but not now :')

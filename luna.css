@@ -42,6 +42,12 @@ main {
     border: 3px solid #391669;
     border-radius: 5px;
 
+    background:#1a0b333b;
+    backdrop-filter: blur(1px);
+
+    transition: all 0.35s ease-in-out;
+}
+.ass:hover {
     background:#1a0b3379;
     backdrop-filter: blur(5px);
 }
@@ -212,5 +218,16 @@ nav a:hover {
     }
     .songrando {
         max-width: 50%;
+    }
+    .tip {
+        display: grid;
+        align-items: center;
+        text-align: center;
+        justify-items: center;
+
+        max-width: 100%;
+        
+        margin: 0 auto;
+        padding: 0px;
     }
 }

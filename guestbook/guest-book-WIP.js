@@ -4,6 +4,15 @@ function encodeHTML(str) {
     return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
 }
 
+function normalizeURL(url) {
+    if (!url) return "";
+    url = url.trim();
+    if (!/^https?:\/\//i.test(url)) {
+        url = "https://" + url;
+    }
+    return url;
+}
+
 function fetchGuestBook_Entries() {
     fetch(`https://opensheet.elk.sh/${Google_Form_ID}/${Google_Form_Name}`)
     .then((res) => res.json())
@@ -22,14 +31,16 @@ function fetchGuestBook_Entries() {
             let ConvertedTime = tConvert(splitTime_1);
             let SantizeName = encodeHTML(sortedInput[i].Name || "Anonymous").replace(/[^\x00-\x7F]/g, "");
             let SanitizeWebsite = encodeHTML(sortedInput[i].Email || "");
+            let OopsWebsite = normalizeURL(sortedInput[i].Email || "");
             let SantizeResponses = encodeHTML(sortedInput[i].Guestbook_Entry || "").replace(/[^\x00-\x7F]/g, "");
+            let EntryClass = sortedInput[i].Class || "default";
 
             jsonContainer.innerHTML += `
             <div class="entry">
                 <div class="entry-info">
                     <p>
-                        <span class="author"> &lt;${SantizeName}&gt;</span>
-                        <a class="website" target="_blank" href="${SanitizeWebsite}">${SanitizeWebsite}</a>
+                        <span class="author ${EntryClass}"> &lt;${SantizeName}&gt;</span>
+                        <a class="website" target="_blank" href="${OopsWebsite}">${SanitizeWebsite}</a>
                         <span class="date">${splitTime}</span>
                         <span class="time">${ConvertedTime}</span>
                     </p>
@@ -43,9 +54,13 @@ function fetchGuestBook_Entries() {
     .catch(err => console.error("error fetching guestbook. erm... :", err));
 }
 
+let isSubmitting = false;
+
 var swear_words_arr = ["nigger", "nigga", "niglet", "faggot", "fag", "retard", "tranny", "troon"];
 
 function validate_text() {
+    if (isSubmitting) return;
+    
     let swear_alert_arr = [];
     let entryField = document.getElementById("entry.1675800829");
     if (!entryField) return;
@@ -61,16 +76,18 @@ function validate_text() {
     if (swear_alert_arr.length > 0) {
         alert("your message contains filtered words !!: " + swear_alert_arr.join(", "));
     } else {
-        var Gform = document.getElementById("gform");
-        Gform.submit(); 
+        isSubmitting = true;
 
+        var Gform = document.getElementById("gform");
+        Gform.submit();
         Gform.reset();
 
         setTimeout(() => {
+            isSubmitting = false; // reset after the UI swap
             var sendFormContainer = document.getElementById("SendForm");
             sendFormContainer.innerHTML = `
                 <div class="pagecontent" style="height:85%;">
-                    <h2 style="color: #000000; ">entry submitted!</h2>
+                    <h2 style="color: #000000;">entry submitted!</h2>
                     <p>thank you for signing my guestbook!</p>
                     <button class="form-button" onclick="location.reload()">write another?</button>
                 </div>`;

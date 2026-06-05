@@ -8,6 +8,38 @@ html{
     font-family: 'mctitle'; src: url('/assets/fonts/mctitle.ttf') format('truetype');
 }
 
+
+/* CLASSES AND SHIT FOR VERIFIED THINGS OR OTHER STUFF */
+
+.kommit {
+    font-weight: bold;
+    color: #00b3ff !important;
+    text-shadow : 0px 0px 3px #0099ff79;
+}
+.kommit::after {
+    content: url('twitterass.png');
+}
+
+.hyphen {
+    font-weight: bold;
+    color: #81e7fe !important;
+    text-shadow : 0px 0px 3px #81e7fe79;
+}
+.hyphen::after {
+    content: url('hyphen.png');
+}
+
+.slenderbox {
+    font-weight: bold;
+    color: #5b5b5b !important;
+    text-shadow : 0px 0px 3px #000000;
+}
+.slenderbox::after {
+    content: url('slenderbox.png');
+}
+
+/* --------------------------------------------------- */
+
 .background {
     position: fixed;
     top: 0;

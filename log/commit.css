@@ -66,6 +66,17 @@ main {
 	}
 }
 
+#cursor {
+  font-weight: bold;
+  animation: blink 1.2s infinite steps(2, start);
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+
 body{
     margin: 2%;
 }
@@ -91,6 +102,7 @@ details{
     white-space: pre-line;
     display: block;
     padding-left: 20px;
+    margin-bottom: 20px;
 }
 details .small{
     font-size: small;
@@ -114,6 +126,7 @@ summary:hover{
 }
 
 .pastlog{
+    margin-left: 20px;
     display: block;
     color: #8b8cacb3;
     white-space: pre-line;
@@ -129,12 +142,12 @@ summary:hover{
     text-shadow: 0 0 10px #8b8cac66;
 }
 
-p{
+.current{
     white-space: pre-line;
     display: block;
     padding-left: 20px;
 }
-p .small{
+.current .small{
     font-size: small
 }
 
@@ -171,9 +184,7 @@ img{
     max-width: 128px;
     max-height: 128px;
     filter:
-        grayscale(100%)    /* remove colors */
-        brightness(100%)   /* boost contrast */
-        contrast(300%);     /* make it stark */
+        grayscale(100%) brightness(100%) contrast(300%);
     image-rendering: pixelated;
     opacity: 0.5;
     box-shadow: 0px 0px 10px #adb7bc8f;
@@ -184,4 +195,13 @@ img{
         margin-left: 1px;
         margin-right: 1px;
     }
+    .pastlog{
+        margin-left: 0px;
+    }
+    details {
+        padding-bottom: 20px;
+    }
+    body{
+    margin: 1%;
+}
 }

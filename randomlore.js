@@ -1,6 +1,3 @@
-
-
-
 function yowch() {
     var ranNumber = Math.floor(Math.random() * loreData.length);
     var pfpImage = loreData[ranNumber];
@@ -8,20 +5,20 @@ function yowch() {
     const pfpContainer = document.getElementById('randompfp');
     
     if (pfpImage.image === 10) {
-        pfpContainer.innerHTML = `<img class="pfp" src="randompfps/${pfpImage.image}.gif">`;
+        pfpContainer.innerHTML = `<img class="pfp" src="/assets/randompfps/${pfpImage.image}.gif">`;
     }
     else if (pfpImage.image === 22) {
-        pfpContainer.innerHTML = `<img class="pfp" src="randompfps/${pfpImage.image}.gif">`;
+        pfpContainer.innerHTML = `<img class="pfp" src="/assets/randompfps/${pfpImage.image}.gif">`;
     }
     else if (pfpImage.image === 35) {
-        pfpContainer.innerHTML = `<img class="pfp" src="randompfps/${pfpImage.image}.gif">`;
+        pfpContainer.innerHTML = `<img class="pfp" src="/assets/randompfps/${pfpImage.image}.gif">`;
     }
     else if (pfpImage.image === 46) {
-        pfpContainer.innerHTML = `<img class="pfp" src="randompfps/${pfpImage.image}.gif">`;
+        pfpContainer.innerHTML = `<img class="pfp" src="/assets/randompfps/${pfpImage.image}.gif">`;
     }
 
     else {
-        pfpContainer.innerHTML = `<img class="pfp" src="randompfps/${pfpImage.image}.png">`;
+        pfpContainer.innerHTML = `<img class="pfp" src="/assets/randompfps/${pfpImage.image}.png">`;
     }
 
 
@@ -42,18 +39,17 @@ function yowch() {
 var loreData = [
         /* kommit */
     {image: 1, char: `kommit`, yap: `kommit's eyes can glow (and also change colour), as you can see here
-                    <br> it usually happens when he's focused, experiencing heightened emotions, or just to aura farm<br><br>
-                    although not useful for him, he can turn his eyes into a flashlight, lighting up wherever he looks. convenient!`},
-    {image: 2, char: `kommit`, yap: `he really, REALLY likes silly billy.`},
+                    <br> it usually happens when he's focused, experiencing heightened emotions, or just to aura farm`},
+    {image: 2, char: `kommit`, yap: `dude i dont know maaan i havent written any significant lore for this guy someone help`},
     {image: 3, char: `kommit`, yap: `he naturally emits electrical signals and can charge wireless devices around him
-                                    <br> that's why his earphones never seem to run out of battery :o`},
-    {image: 4, char: `kommit`, yap: `in case it wasn't obvious, he is not human :p`},
+                                    <br> that's why his earphones never seem to run out of battery`},
+    {image: 4, char: `kommit`, yap: `in case it wasn't obvious, he is not human`},
     {image: 5, char: `kommit`, yap: `unfortunately, being an android means you can be more susceptible to corruption...`},
     {image: 6, char: `kommit`, yap: `the elytra is his favourite piece of armour! he also loves having a mending shield with a custom banner`},
     {image: 7, char: `kommit`, yap: `he used to have a blue mouth in his older designs. now its normal!`},
     {image: 8, char: `kommit`, yap: `he loves flower crowns :)`},
-    {image: 9, char: `kommit`, yap: `despite having perfect eyesight, he decided to wear glasses because "it looked cool"`},
-    {image: 10, char: `kommit`, yap: `this guy is absolutely horrible at staying nonchalant </3`}, /* gif */
+    {image: 9, char: `kommit`, yap: `despite having perfect eyesight, he decided to wear glasses because "it looked cool and stylish"`},
+    {image: 10, char: `kommit`, yap: `this guy is absolutely horrible at staying nonchalant`}, /* gif */
     {image: 11, char: `the trio`, yap: `it's them!! to ray's dismay, he slept in and missed the group picture`}, /* trio */
 
         /* ray */
@@ -72,10 +68,10 @@ var loreData = [
     {image: 23, char: `ray`, yap: `ray used to have a wifi icon as his symbol! it has now since changed into a comet`},
 
         /* regret */
-    {image: 24, char: ``, yap: `I am regret incarnate.`},
+    {image: 24, char: ``, yap: ` `},
 
         /* crt */
-    {image: 25, char: `cr tv (crt)`, yap: `crt has a mouth and his other eye! he just prefers not to display it to conserve energy`},
+    {image: 25, char: `cr tv (crt)`, yap: `crt has a mouth and his (closed) other eye! he just prefers not to display it to conserve energy`},
     {image: 26, char: `cr tv (crt)`, yap: `years ago, crt used to be a show host and often wears a ribbon alongside a floating top hat!
                                             he has since retired and now lives casually`},
     {image: 27, char: `cr tv (crt)`, yap: `his favourite game is ultrakill and... powerwash simulator? duality of man<br> 

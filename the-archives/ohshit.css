@@ -1,8 +1,10 @@
 html {
-    font-family:  monospace;
+    font-family: monospace;
     font-size: 15px;
+    
+    background: #67BED9;
+    background: linear-gradient(0deg, rgba(103, 190, 217, 1) 0%, rgba(38, 118, 189, 1) 100%);
 
-    background-color: #92bfff;
     background-image: url("sky.png");
     background-repeat: no-repeat;
     background-size: 100%;
@@ -14,10 +16,6 @@ body {
     color: #ffffff;
     text-shadow: 0 0 5px #ffffff;
     text-align: center;
-}
-
-@font-face {
-    font-family: 'winxp'; src: url('/.assets/fonts/winxpttf.ttf');
 }
 
 .path {

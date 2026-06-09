@@ -29,14 +29,14 @@
     <div class="boxlol"> 
 
         <div class="container">
-            <div class="bbbb">
-                * hi! the name's <span class="col">kommit</span>! kommit the- 
-                <span class="small">yknow this is a bad bit actually</span>
-                <br>* welcome to my corner in the internet :)
+            <div class="bbbb" style="font-size: larger;">
+                * KOMMIT - ATK 9 DEF 4<br>
+                * Makes things with too much heart for someone who claims not to care. Probably ate something weird this morning...
             </div>
             <div class="bbbb">
                 * i made this site cause i wanted my own personal space without limitations (like carrd, strawpage)
-                and lowkey to also use my html knowledge i learned in class xd
+                and lowkey to also use my html knowledge i learned in class <span class="small">and "permanently borrowed" so to say</span> xd<br>
+                * <span class="col">cool yellow text that catches your attention</span>
             </div><br>
 
             <div class="tab">
@@ -74,8 +74,8 @@
                         <li>i like creating things - more specifically art, music, and coding (html + beginner python)
                         <br>drawing is still my fav out of my big three though
                         <li>ive dabbled in 2d animation and 3d animation+renders as well (with mineimator/blockbench),
-                            and would love to pick up blender and godot soon :)
-                        <br><span class="small">making a 3d model out of my character(s) is a goal of mine!</span></li>
+                            and recently made my first blender model - a low poly rendition of my sona!
+                        <br><span class="small">making a good 3d model out of my character(s) is a goal of mine, as well as making a game!</span></li>
                         <br>
                         <li>what else do i even write here... im not very interesting</li>
                         <li>my favourite colour is blue + a lot of the colder colours</li>
@@ -132,9 +132,11 @@
                             <iframe width="300" height="165" src="https://www.youtube-nocookie.com/embed/wo0FFbLJoNM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
                             encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
                             referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin allow-presentation allow-popups allow-forms"></iframe>></iframe></div><br>
-                        <li>song collab with moon &lt;3
+                        <li>song collabs with moon &lt;3
                             <iframe data-testid="embed-iframe" sandbox="allow-scripts allow-same-origin allow-forms allow-popups" referrerpolicy="no-referrer" credentialless
                             src="https://open.spotify.com/embed/track/43G0Sgkx8DGNL7XUjNIavj" width="100%" height="112" frameBorder="0" allow="clipboard-write; encrypted-media;" loading="lazy"></iframe>
+                            <iframe data-testid="embed-iframe" sandbox="allow-scripts allow-same-origin allow-forms allow-popups" referrerpolicy="no-referrer" credentialless
+                            src="https://open.spotify.com/embed/track/4bqDgW2fHOoqpYBKTUhZL4" width="100%" height="112" frameBorder="0" allow="clipboard-write; encrypted-media;" loading="lazy"></iframe>
                         </li>
                         <li>here's <a href="https://www.youtube.com/@funkinosc_official">FunkinOSC Official</a>, the official channel of a mod i was director on! it's run by a friend of mine, starry :D</li>
                     </ul>
@@ -174,6 +176,7 @@
                             <li>old internet and old tech</li>
                             <li>toki pona (cant speak but its interesting)</li>
                             <li>learning about how things work fascinates me a lot</li>
+                            <li>^ stuff like enemy ai breakdowns or algorithms</li>
                             </ul>
                         </li>
                     </ul>
@@ -182,7 +185,7 @@
                 <div id="music" class="tabcontent">
                     <h3 class="titlething">my music taste</h3>
                     <ul>
-                        <li>my music taste is honestly all over the place, but in general,
+                        <li>my music taste is honestly all over the place, but in general...
                         <br>whatever i like, i listen to it! genre or who made it doesnt matter much for me</li><br> 
                         <li>speaking of playlists, i have three "main" playlists;
                             <ul>
@@ -192,12 +195,12 @@
                             </ul>
                         </li><br> 
                         <li>from what ive gathered however, i like instrumental stuff more than songs with vocals!
-                        <span class="small"><br>i basically grew up listening to game soundtracks so that  makes sense lmao</span></li><br>
-                        <li>instead of yapping and trying to make myself make sense, heres my everyday playlist</li>
+                        <span class="small"><br>i basically grew up listening to game soundtracks so that makes sense lmao</span></li><br>
+                        <li>instead of yapping and trying to make myself make sense, heres my middle playlist!</li>
                         <iframe sandbox="allow-scripts allow-same-origin allow-forms allow-popups" referrerpolicy="no-referrer" credentialless
-                        style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1zbqGVlsuNenBkxiK8cB1N?theme=0"
-                        width="100%" height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                        loading="lazy" data-testid="embed-iframe" allowfullscreen="" frameBorder="0"></iframe>
+                        style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7iIScQ2aYfu3Sf9dD1B8B5?theme=0"
+                        width="100%" height="452" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy" data-testid="embed-iframe" allowfullscreen="" frameBorder="0"></iframe><br>
                 </div>
 
                 <div id="blinkies" class="tabcontent">
@@ -316,22 +319,18 @@
 
     <script>
         function openCity(evt, cityName) {
-        // Declare all variables
         var i, tabcontent, tablinks;
 
-        // Get all elements with class="tabcontent" and hide them
         tabcontent = document.getElementsByClassName("tabcontent");
         for (i = 0; i < tabcontent.length; i++) {
             tabcontent[i].style.display = "none";
         }
 
-        // Get all elements with class="tablinks" and remove the class "active"
         tablinks = document.getElementsByClassName("tablinks");
         for (i = 0; i < tablinks.length; i++) {
             tablinks[i].className = tablinks[i].className.replace(" active", "");
         }
 
-        // Show the current tab, and add an "active" class to the button that opened the tab
         document.getElementById(cityName).style.display = "block";
         evt.currentTarget.className += " active";
         }

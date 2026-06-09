@@ -65,7 +65,8 @@ a:hover {
 }
 
 .floating {
-    position: relative;
+    width: 500px;
+    position: fixed;
     animation: float 5s ease-in-out infinite;
 }
 @keyframes float {

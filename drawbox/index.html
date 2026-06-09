@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kommit's drawbox</title>
+
+    <link href="ico-drawbox.png" rel="icon" type="image/x-icon">
+    <link href="style.css" rel="stylesheet"> 
+    <meta name="description" content="kommit's drawbox!! draw something and post it :) it's basically like a strawpage lol does anyone ever read this thing even">
+    <meta name="author" content="kommit">
+
+    <link rel="stylesheet" href="https://unpkg.com/xp.css">
+
+</head>
+
+<body onload="cooldownFunc(), Clear()">
+
+    <h3>kommit's drawbox</h3>
+
+    <div class="centerthefuckon">
+        <div class="window">
+            <div class="title-bar">
+                <div class="title-bar-text">navigator.exe</div>
+            </div>
+
+        <div class="window-body">
+            <p>
+            <button><a href="/index.html">home</a></button>
+            <button><a href="/about-me/">about me</a></button>
+            <button><a href="/artchive/">artchive</a></button>
+            <button><a href="/commissions/terms/">comms [WIP]</a></button>
+            <button><a href="/ultrabox/">UB:SR</a></button>
+            <button><a href="/guestbook/">guestbook</a></button>
+            <button><a href="/log/">changelog</a></button>
+            <button><a href="/sitemap/">sitemap</a></button>
+            </p>
+        </div>
+
+        <div class="status-bar">
+            <p class="status-bar-field">Press F1 for help</p>
+            <p class="status-bar-field">Slide 1</p>
+            <p class="status-bar-field">CPU Usage: 14%</p>
+        </div>
+        </div>
+    </div>
+
+<header> 
+    
+    
+</header>
+
+    <div class="columnsidk">
+        <div class="leftleft">
+
+            <div class="qweqweqwe">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">draw something here!</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Close"></button>
+                    </div>
+                </div>
+
+                <canvas id="drawboxcanvas" width="500" height="500"></canvas>
+
+                <div onclick="change_color(this)" style="background:red" class="stroke-color"></div>
+                <div onclick="change_color(this)" style="background:blue" class="stroke-color"></div>
+                
+                <button id="buttundo" onclick="Restore()"><img src="undo.png" alt="undo action">undo</button>
+                <button id="buttdelete" onclick="Clear()"><img src="clear.png" alt="clear the canvas">clear</button>
+
+                <input type="color" oninput="stroke_color = this.value">
+
+                <button id="butteraser" onclick="set_brush('normal'); toggle_eraser(true)"><img src="eraser.png" alt="eraser"></button>
+                <button id="buttpencil" onclick="set_brush('normal'); toggle_eraser(false)"><img src="pencil.png" alt="pencil tool"></button>
+                <button id="buttwatercolor" id="butteraser" onclick="set_brush('watercolor'); toggle_eraser(false)"><img src="watercolor.png" alt="watercolor"></button>
+
+                <br><br>
+                
+                <div class="field-row" style="width: 400px">
+                    <label for="range25">Size:</label>
+                    <label for="range26">1</label>
+                    <input id="range26" type="range" min="1" max="100" value="3" oninput="stroke_width = this.value"/>
+                    <label for="range27">100</label>
+                    <input type="text" oninput="stroke_width = this.value" maxlength="2" placeholder="brush size... (1-99)" minlength="1">
+                </div>
+
+                <br>
+
+                <div class="field-row">
+                    <label for="text21">name:</label>
+                    <input id="text21" type="text" placeholder="anonymous" oninput="username = this.value" required="" maxlength="32"/>
+
+                    <button id="submit" onclick="cooldownFunc()"><img src="send.png" alt="submit your drawing!">disabled</button><span id="cooldowntext" style="margin: 10px;">wait 1min (spam protect)</span>
+                    <script>
+                        function cooldownFunc() {
+                            console.log('clicked');
+                            document.getElementById("submit").disabled = true;
+                            setTimeout(function(){
+                                document.getElementById("submit").disabled = false;
+                                document.getElementById("submit").innerHTML = `submit!`;
+                                document.getElementById("cooldowntext").innerHTML = ``;
+                            },60000);
+                        }
+                    </script>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="leftleft">
+            <div class="window">
+                <div class="title-bar">
+                    <div class="title-bar-text">where am i.txt</div>
+                    <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <p>
+                        a drawbox is a place where you can draw anything you want! show off your art skills :)
+                        <br>as long as you follow the rules of course, which are written below
+                        <br><br>once you're done, just click the submit button! leave your username if you want to make yourself known, 
+                        but you can leave it as blank (it will autofill as anonymous)
+                        <br><br>
+                        i occassionally drop comments as well :)
+                        <br><br>
+                        if you want to leave a written message, head on over to my <a href="/guestbook/">guestbook</a> instead!
+                        <br><br><br>
+                        note: <span style="color: #0000ff;">best viewed on desktop!</span> please enable desktop mode if mobile is finnicky
+                    </p>
+                </div>
+            </div>
+
+            <br><br>
+
+            <div class="window">
+                <div class="title-bar">
+                    <div class="title-bar-text">Command Prompt</div>
+                    <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="window-body commandpromptmobile"> <!-- this looks stupid but hey no ones gonna check on the code anyways  -->
+                <pre>
+kommitOS - COMET DOS 
+kommittt (c) 2026. Not A Corporation. All nights reserved.
+
+C:&#92;COMET&#92;SYSTEM32> rules
+For more information on a rule, type RULE rule-number
+1. NO NSFW       Do not submit explicit imagery.
+2. LOW-EFFORT    Low-effort submissions will be removed.
+3. SPAM          Blank canvases will be skinned alive
+
+C:&#92;COMET&#92;SYSTEM32> keybinds
+B           Brush/Pencil tool
+W           Watercolor tool
+E           Eraser
+CTRL+Z      Undo
+DEL         Clear Canvas</pre>
+                </div>
+            </div>
+
+            <br><br>
+
+            <div class="window">
+                <div class="title-bar">
+                    <div class="title-bar-text">credits.txt</div>
+                    <div class="title-bar-controls">
+                    <button aria-label="Help"></button>
+                    <button aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <p>
+                        thank you to the person who made the original <a href="https://drawbox.nekoweb.org/">drawbox</a> site on nekoweb!
+                        <br>unfortunately something happened to it, but there are archives in the waybackmachine if you wish to create your own!
+                        <br><br>
+                        and a huge thank you to botoxparty for <a href="https://botoxparty.github.io/XP.css/">xp.css</a>!!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <br><br> <!-- brr brr patapim -->
+
+    <p id="status"></p>
+
+    <hr></hr>
+
+    <h3>submitted drawings</h3>
+    <div id="gallery">
+        <progress></progress>
+    </div>
+    
+    <script src="drawbox.js"></script>
+
+    <footer></footer>
+</body>
+</html>

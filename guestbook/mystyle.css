@@ -13,7 +13,7 @@ html{
 
 .kommit {
     font-weight: bold;
-    color: #00b3ff !important;
+    color: #00eaff !important;
     text-shadow : 0px 0px 3px #0099ff79;
 }
 .kommit::after {
@@ -39,6 +39,30 @@ html{
 }
 
 /* --------------------------------------------------- */
+
+/* patpatpatpatpat */
+#squish {
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.patpat-active {
+  animation: patpat-sequence 0.2s ease-in-out;
+}
+
+@keyframes patpat-sequence {
+    0% {
+        transform: scale(1, 1);
+    }
+    20% {
+        transform: scale(1.1, 0.8); 
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+
 
 .background {
     position: fixed;
@@ -275,7 +299,7 @@ body {
     border-style: none;
 }
 .entry-info .website:hover {
-    color: #00b3ff;
+    color: #00eaff;
     text-decoration: underline;
     border-style: none;
 }
@@ -575,6 +599,8 @@ form:valid input[type="submit"] {
         margin: 10px;
     }
 
+
+
     .page {
         padding: 20px;
         background-size: cover;
@@ -632,5 +658,18 @@ form:valid input[type="submit"] {
         width: 100%;
         text-align: center;
         box-sizing: border-box;
+    }
+    .entry-info .author {
+        font-size: 0.9rem;
+    }
+    .entry-info .website {
+        font-size: 0.6rem;
+    }
+    .entry-text p {
+        font-size: 0.8rem;
+    }
+    .entry .date, .time{
+        opacity: 0.5;
+        font-size: 0.6rem;
     }
 }

@@ -209,6 +209,14 @@ nav a:hover {
     cursor: pointer;
 }
 
+#statuscafe-username {
+    margin: 0 1em 0.5em 1em;
+    font-size: large;
+}
+#statuscafe-content {
+    margin: 0 1em 0.5em 1em;
+}
+
 @media (max-width: 800px) {
     body {
         max-width: 100%;

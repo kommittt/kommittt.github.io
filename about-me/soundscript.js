@@ -20,3 +20,5 @@ function playSound(src) {
 
     audio.play(); // if all those conditions arent met then play (most likely first instance)
 }
+
+// future me update: i dont know why i added comments here but i have a hunch (i love yapping)

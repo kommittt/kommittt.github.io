@@ -777,7 +777,72 @@ var messages = [
     `yagcONE (yag-cone trust)`,
     `RAMburger`,
     `hi reeve!`,
-
+    `ellie fell for the adhd trap`,
+    `minecraft: clankers & crankers`,
+    `shjork`,
+    `Minecraft but I get RAILED every time I take damage`,
+    `the larptubers are coming`,
+    `they call me... the wifehaver`,
+    `shh! dont mention skyblock near her`,
+    `Touhou Prawject`,
+    `i am clanker clanker certified`,
+    `MINECRAFT: CLANKERS AND CRANKERS`,
+    `add moobloom!`,
+    `cornflowers!`,
+    `garlands are so pretty`,
+    `Whatever you do at the crossroads, don't turn left.`,
+    `whatever you do at the crossroads... Keep going forward.`,
+    `god save you if you hear something nearby, because it sure as hell has heard you.`,
+    `And the more times it remembers something...the less it does.`,
+    `A copy of a copy.`,
+    `hello everybody my name is larpiplier`,
+    `hows it going bros my name is larpewdiepie`,
+    `LARPNOBLADE SOMETIMES DIES`,
+    `my Particular Interests are absolutely normal and is no cause for concern`,
+    `I will grind you down until the very SPARKS CRY FOR MERCY!`,
+    `low cortisol brush`,
+    `the pharaohs curse`,
+    `beware the Older Gentleman`,
+    `The Oldest View.`,
+    `warning: severely homosexual`,
+    `there are two kinds of people in this world.. smart fellas, and fart smellas.`,
+    `persona 6 announced and p4r release date as im writing this holy shit`,
+    `i made some BULLSHITTTT!!!!`,
+    `the mathematically accurate version of my thoughts`,
+    `why larp as an ai when you're an ai`,
+    `yyyy-you... used ai... (boyfriend picture)`,
+    `anyone else hear that ominous bell tolling???? :joy: :joy: :joy: no?? just me????`,
+    `Your modifier is the Demon King of Salvation.`,
+    `Can you hear me? Wake up.`,
+    `AEsir FEST`,
+    `dual weilding backshrooms while lost in the backrooms`,
+    `theyre doing BACKSHOTS in the BACKROOMS????`,
+    `the amazing digital footprint`,
+    `why do i have 14 mechanical pencils i do not need that many`,
+    `every music career starts with making a bad megalovania`,
+    `his divine punishment is over`,
+    `the freddy fazbear plushie i taped up on my ceiling has lasted 1 year before he eventually fell to his demise`,
+    `*disappears for a month* that was a nice nap`,
+    `cakes and candles my brother`,
+    `also check out neocities!`,
+    `also check out tildetown!`,
+    `also check out nekoweb!`,
+    `the gods have given me a sign. i shall draw gay things now`,
+    `"they should make gay people part two" "oh so bilingual people"`,
+    `im gonna get 4th walled im so fucking dead`,
+    `I WANT HIM DEAD`,
+    `when mom comes home with the sludge`,
+    `i'm slowly forgetting your face`,
+    `KWIK FLIP`,
+    `still life`,
+    `how to read my version number: first digit is huge updates, second are okay releases, third number is the shame version with embarassing fixes`,
+    `"i am a frau-" v1 ultrakill: "say what now?"`,
+    `joy. definitely joy.`,
+    `spoon no hold! spoon no hold!!`,
+    `schwoop`,
+    `21`,
+    `<span class="determination">Find her.</span>`,
+    `back on the grind`
 ];
 var noMoreManualEditing = messages.length;
 
@@ -915,14 +980,17 @@ function onClick() {
         document.getElementById("clickyTxt").innerHTML = `<a id="clicks">660</a> | i wont have anything else to say, so shoo!`;
     }
     if (clicks === 700) {
-        document.getElementById("clickyTxt").innerHTML = `<a id="clicks">660</a> | ...`;
+        document.getElementById("clickyTxt").innerHTML = `<a id="clicks">700</a> | ...`;
+    }
+    if (clicks === 800) {
+        document.getElementById("clickyTxt").innerHTML = `<a id="clicks">800</a> | you're just wasting your time here.`;
     }
 
     if (clicks === noMoreManualEditing) {
         document.getElementById("clickyTxt").innerHTML = `<a id="clicks">${noMoreManualEditing}</a> | aaaand you basically cycled through every splash text. happy?`;
     }
     if (clicks === noMoreManualEditing + 100) {
-        document.getElementById("clickyTxt").innerHTML = `<a id="clicks">${noMoreManualEditing+100}</a> | don't you have anything better to do?`;
+        document.getElementById("clickyTxt").innerHTML = `<a id="clicks">${noMoreManualEditing+100}</a> | ...don't you have anything better to do?`;
     }
 
     document.getElementById("clicks").innerHTML = clicks;

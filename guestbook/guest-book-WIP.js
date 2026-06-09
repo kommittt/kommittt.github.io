@@ -83,7 +83,7 @@ function validate_text() {
         Gform.reset();
 
         setTimeout(() => {
-            isSubmitting = false; // reset after the UI swap
+            isSubmitting = false;
             var sendFormContainer = document.getElementById("SendForm");
             sendFormContainer.innerHTML = `
                 <div class="pagecontent" style="height:85%;">

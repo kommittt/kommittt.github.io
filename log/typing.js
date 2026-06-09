@@ -60,17 +60,26 @@ const messages = [
     `monitoring you, like machines do`,
     `im running out of cool machine/code talk`,
     `beep`,
-    `i cant write in my own guestbook cause theres a FUCKING captcha`,
+    `why am i verified on guestbook`,
     `#00bbff`,
     `click click click`,
     `whirr...`,
+    `ts grinds my gears`,
+    `"The tea is at the optimal temperature for consumption."`,
+    `"Pilot. Listen to me."`,
+    `"Measure exactly 226.738g of sugar. The molecular weight must be precise for optimal caramelization."`,
+    `"Please... tell me the difference. If I am a machine that is broken, I can fix it. But if I'm a person who's hurting... I don't have a manual for that."`,
+    `a passage that brings a piece (or a movement) to an end`,
+    `<br> <br> patapim`,
+    `wires wires wires wires wires`,
+    `cable management`
 ];
 //  `beep`,
 
 setTimeout(() => {
-    const message = ranMessage(); // gets the message and shit
-    typeWriter(message); // puts the message out
-}, 2500); //delay
+    const message = ranMessage();
+    typeWriter(message);
+}, 2500);
 
 function ranMessage() {
     const rText = Math.floor(Math.random() * messages.length);
@@ -81,7 +90,6 @@ function typeWriter(txt, i = 0) {
     if (i === 0) {
         document.getElementById("type_text").innerHTML = "";
     }
-    // basically clears whatevers before it(aka the ...)
     
     document.getElementById("type_text").innerHTML += txt.charAt(i);
 

@@ -11,9 +11,9 @@ jobs:
       # your build step here
         
       - name: deploy2nekoweb
-        uses: indiefellas/deploy2nekoweb@main
+        uses: indiefellas/deploy2nekoweb@v1.0.1
         with:
           nekoweb-api-key: ${{ secrets.NEKOWEB_API_KEY }}
           nekoweb-domain: 'kommit.nekoweb.org'
           nekoweb-username: 'kommit'
-          directory: 'master'
+          directory: 'public'

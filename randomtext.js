@@ -841,6 +841,11 @@ var messages = [
     `spoon no hold! spoon no hold!!`,
     `schwoop`,
     `21`,
+    `also on nekoweb!`,
+    `also on neocities!`,
+    `kind of on tilde.town!`,
+    `also on github pages!`,
+    `my balls itch`,
     `<span class="determination">Find her.</span>`,
     `back on the grind`
 ];

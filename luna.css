@@ -11,7 +11,6 @@ html {
     background-position: center;
 }
 
-
 body {
     font-size: 14px;
     color:#d3d1ff;
@@ -21,6 +20,11 @@ main {
     overflow-x: hidden;
     max-height: 70vh;
     overflow: auto;
+}
+
+code {
+    font-family: monospace;
+    background-color: #00000075;
 }
 
 .toptainer {
@@ -71,6 +75,20 @@ main {
     100%{
       background-position-x: 600vw;
     }
+}
+
+dt {
+    float: left;
+    border: 1.5px solid var(--lightblue1);
+    font-weight: 600;
+    width: 130px;
+    padding: 3px;
+}
+dd {
+    margin: 0 0 10px 135px;
+    padding: 3px;
+    word-break: break-word;
+    max-width: calc(100% - 135px);
 }
 
 .splash{

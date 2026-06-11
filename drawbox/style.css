@@ -123,17 +123,25 @@ canvas {
     canvas {
         width: 100%;
         height: 100%;
-        margin: auto;
+        display: block;
+    }
+
+    .qweqweqwe {
+        width: 100%;
         display: block;
     }
 
     .columnsidk {
         display: block;
-        margin: 4% auto;
+        margin: 42% auto;
     }
 
     pre {
         font-size: 10px !important;
         
     }
+    .centerthefuckon {
+        margin-bottom: 5px;
+    }
+
 }

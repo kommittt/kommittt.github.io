@@ -198,7 +198,8 @@ async function fetchImages() {
 
         const timestamp = columns[0].trim();
         const imgUrl = columns[1].trim().replace(/"/g, "");
-        const author =columns[2].trim().replace(/"/g, "");
+        const rawAuthor = columns[2] ? columns[2].trim().replace(/"/g, "") : "anonymous";
+        const author = rawAuthor.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
         const baseComment = columns[3].trim().replace(/"/g, "");
         const comment = baseComment ? `<b>kommit's comment:</b><br>${baseComment}` : "";
 

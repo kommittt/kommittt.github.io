@@ -1,0 +1,231 @@
+@charset "UTF-8";
+
+html {
+    font-family: 'Ubuntu', 'Calibri', sans-serif;
+    text-align: center;
+    color: #ffffff;
+    background: #16131b;
+    background-image: url('/ultrabox/assets/bgsamples.svg');
+    background-attachment: fixed;
+    background-position: center;
+    scrollbar-color: #49495f #272331;
+}
+
+h1 {
+    background: #49495f;
+    padding: 20px 10px 20px 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+.texttext {
+    margin: 1% auto;
+    padding: 2%;
+    max-width: 70%;
+}
+h2 {
+    padding: 20px 10px 20px 10px;
+    border: none;
+    border-radius: 10px;
+    padding: 2%;
+    margin: 1% auto;
+    max-width: 70%;
+}
+
+/* new shit */
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 250px;
+    background: #16131b;
+    background-attachment: fixed;
+    position: fixed;
+    height: 97%;
+    overflow: auto;
+    top: auto;
+    border: #49495f;
+    border-style: solid;
+    border-radius: 10px;
+}
+.sidebar h3 {
+    background: #49495f;
+    padding: 4%;
+    margin: 2%;
+    margin-bottom: 12px;
+    border: none;
+    border-radius: 10px;
+}
+.sidebar a {
+    display: block;
+    color: #a3a3a3;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 10px;
+    margin: 2%;
+}
+.sidebar a.workinprogress {
+    margin: 2%;
+    color: #444444;
+    text-decoration: line-through;
+}
+.sidebar a.workinprogress:hover:not(.active) {
+    background: #ff000000;
+    color: #ffffff;
+}
+.sidebar a.active {
+    margin: 2%;
+    background: #49495f;
+    color: #ffffff;
+    border-radius: 10px;
+}
+.sidebar a.active:hover {
+    background-color: #5c5ca3
+}
+.sidebar a:hover:not(.active) {
+    margin: 2%;
+    background-color: #49495f8d;
+    color: white;
+    border-radius: 10px;
+}
+
+div.content {
+    margin-left: 250px;
+    padding: 1px 16px;
+    height: 1000px;
+}
+
+
+/* Style the search box inside the navigation bar
+https://www.w3schools.com/howto/howto_css_searchbar.asp */
+.searchthing {
+    background-color: #00000000;
+    border: 2px solid #49495f;
+    border-radius: 5px;
+    font-family: 'Ubuntu', 'Calibri', sans-serif;
+    color: #ffffff;
+
+    padding: 6px;
+    font-size: 12px;
+}
+
+/* links */
+a {
+    color: #4c7cff;
+}
+
+a:hover {
+    color: #a6beff;
+}
+
+
+/* text styles and stuff */
+.col {
+    color: #ff81d5;
+}
+small {
+    opacity: 0.6;
+    font-size: small;
+}
+
+/* column view */
+.stupidfuckingcontainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+.audiofile {
+    display: flex;
+    flex-direction: column;
+    font-size: large;
+    padding: 20px;
+    border: 4px solid #49495f;
+    background-color: #1a1722;
+    border-radius: 10px;
+    gap: 10px;
+}
+
+.tags {
+    font-family: monospace;
+    font-size: small;
+    text-transform: lowercase;
+
+    opacity: 0.5;
+    color: #ffffff;
+}
+.submitter {
+    font-size: small;
+    opacity: 0.5;
+    color: #ffffff;
+}
+
+.audiofile button{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 7px 0;
+    font-size: x-large;
+}
+.buttcontain {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    width: 100%;
+    height: 140%;
+    margin: 0;
+}
+.audioplay {
+    background-color: #299d48;
+    border: 0px;
+    border-radius: 5px;
+    color: #ffffff;
+}
+.audiostop {
+    background-color: #9d2929;
+    border: 0px;
+    border-radius: 5px;
+    color: #ffffff;
+}
+.audiocopy {
+    background-color: #292b9d;
+    border: 0px;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: x-small;
+    font-family: monospace;
+}
+button:hover {
+    filter: brightness(150%);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        font-size: small;
+        margin-bottom: 10px;
+    }
+    .sidebar a {
+        float: left;
+    }
+
+    div.content {
+        margin-left: 0;
+    }
+    .stupidfuckingcontainer {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .sidebar a {
+        text-align: center;
+        float: none;
+    }
+}
+

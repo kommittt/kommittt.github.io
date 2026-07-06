@@ -6,17 +6,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>UB:SR - Ace Attorney: Phoenix Wright</title>
-    <meta name="description" content="a sample dump/repository made for beepbox's fork, ultrabox! current page: aceattorney1">
+    <title>UB:SR - User Submitted</title>
+    <meta name="description" content="a sample dump/repository made for beepbox's fork, ultrabox! current page: user submitted homepage">
     <meta name="author" content="kommit">
     <link href="/ultrabox/ico-ultrabox.png" rel="icon" type="image/x-icon">
-    <link href="samples-page.css" rel="stylesheet">
+    <link href="/ultrabox/assets/users-page.css" rel="stylesheet">
 
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <script src="/ultrabox/pauseAudio.js"></script>
     <script src="/ultrabox/copylink.js"></script>
     <script src="/ultrabox/pmo.js"></script>
+    <script src="/ultrabox/assets/submit.js"></script>
 </head>
 
 <main id="testsidebar" class="sidebar"></main>
@@ -26,23 +26,61 @@
         <header class="texttext" id="top">
             <h1>user submitted samples</h1>
             <p class="whitespacething">
-                one-time samples that i got submitted!!
+                samples submitted from other users!! with the new update, you can now directly submit within this page without having to wait a year for me to update 💔
+
+                <h3>submission form:</h3>
+                please follow the directions carefully! do note that i try to "moderate" it by deleting duplicates and stuff.<br><br>
+                if i havent responded in a while, want something removed, or messed something up, contact me<br>
+                if it doesnt work or do not want to use this, head over to the google forms link here:<br>
+                <a href="https://forms.gle/mqMkWtbkBM24PPhy7">https://forms.gle/mqMkWtbkBM24PPhy7</a>
+                <br><br><br>
+                <div class="dih" id="dih">
+
+                    <form name="gform" id="gform" action="https://docs.google.com/forms/d/e/1FAIpQLSftt57Lg0qjZLXmZ0BWtqrruRON3dliYnXkSg-LLNsmyDil1w/formResponse" target="hidden_iframe">
+                        
+                        <label for="entry.67144316" class="aterisk_after"><b> &gt; name/title of the sample</b></label>
+                        <input class="form-element short fuck" type="text" name="entry.67144316" id="entry.67144316" placeholder="sine wave" style="width: 100%;" required>
+                            <br><br>
+                        <label for="entry.2051242583"><b> &gt; sample link<br></b>
+                        <span class="col">only accepts filegarden and dl.dropboxusercontent.com</span> links. please include the <code>https://</code> because it will get skipped for safety reasons
+                        <br>if you want to put multiple links, <span class="col">please include the linebreaks</span> as shown in the preview</label>
+                        <textarea class="form-element short fuck" type="text" name="entry.2051242583" id="entry.2051242583" required
+                        placeholder="https://file.garden/
+https://file.garden/" style="width: 100%; margin-bottom: 10px;"></textarea> <!--that is such an awful looking thing-->
+                            <br>
+                        <label for="entry.464818375" class="max-length"><b> &gt; username (optional)<br></b>
+                            if you want to get credited, put your username here. otherwise, leave blank for anonymous</label>
+                        <input class="form-element short fuck" name="entry.464818375" id="entry.464818375" style="width: 100%;" placeholder="kommittt"></input>
+                            <br><br>
+                        <label for="entry.1912312139" class="max-length"><b> &gt; tags (optional)<br></b>
+                            tag your samples for easier searchability. try not to repeat things already included in the name (example, for a piano sample, don't add 'piano.' add 'keys' instead)! and don't forget to add 'user'</label>
+                        <input class="form-element short fuck" name="entry.1912312139" id="entry.1912312139" style="width: 100%;" placeholder="user, 8bit"></input>
+                            <br><br>
+                        <label for="entry.1819211655" class="max-length"><b> &gt; preview (optional)<br></b>
+                            add a tinyurl link for a sample showcase, a demo, or presets. useful for multiple samples</label>
+                        <input class="form-element short fuck" name="entry.1819211655" id="entry.1819211655" style="width: 100%;" placeholder="https://tinyurl.com/25498ssl"></input>
+                        <div style="margin-top: 15px; display: flex; gap: 10px;">
+                            <input id="submitbuttonform" class="form-button" type="submit" value="submit sample"> <input class="form-button" type="reset" value="reset input">
+                        </div>
+                    </form>
+                </div>
             </p>
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
         </header>
 
-        <div class="stupidfuckingcontainer">
-            <div class="audiofile">
-                <p>philly hit - by wolfhawk600
-                    <span class="link" onclick="copy()">https://file.garden/aPkSvkhCJDRhWJ6A/philly-hit.mp3</span>
-                    <audio controls> <source type="audio/wav" preload="none"
-                        src="https://file.garden/aPkSvkhCJDRhWJ6A/philly-hit.mp3">
-                    </audio>
-                </p>
-            </div>
+        <!--
+        <input class="searchthing" type="text" placeholder="search samples..." font-size: 12px; oninput="searchSamples()">
+        -->
+        <div class="stupidfuckingcontainer" id="sampleshtml">
+            <span>loading, please wait...</span>
+            <progress id="progress-bar" aria-label="Content loading…"></progress>
+            
+        </div>
 
         <footer>
-            <p class="small">
-                thank you to everyone here who helped! check out <a href="/ultrabox/credits-and-changelog/">this page for changelog and credits!</a>
+            <p class="small"><br>
+                thank you to everyone here who submitted, and i hope this was helpful! check out <a href="/ultrabox/queue-and-credits/">this page</a> for contributors<br>
+                google sheets code by MarketingPipeline (same as <a href="/guestbook/">guestbook</a> page)
                 <br><br><br>
             </p>
         </footer>

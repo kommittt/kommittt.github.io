@@ -43,7 +43,7 @@ var loreData = [
     {image: 2, char: `kommit`, yap: `dude i dont know maaan i havent written any significant lore for this guy someone help`},
     {image: 3, char: `kommit`, yap: `he naturally emits electrical signals and can charge wireless devices around him
                                     <br> that's why his earphones never seem to run out of battery`},
-    {image: 4, char: `kommit`, yap: `in case it wasn't obvious, he is not human`},
+    {image: 4, char: `kommit`, yap: `not sure whether to turn him into a biomechanical (mostly mechanical, partly biological) thing or fully mechanical... either way, your boy's not a human`},
     {image: 5, char: `kommit`, yap: `unfortunately, being an android means you can be more susceptible to corruption...`},
     {image: 6, char: `kommit`, yap: `the elytra is his favourite piece of armour! he also loves having a mending shield with a custom banner`},
     {image: 7, char: `kommit`, yap: `he used to have a blue mouth in his older designs. now its normal!`},
@@ -56,7 +56,7 @@ var loreData = [
     {image: 12, char: `ray`, yap: `do protogens have mouths? in ray's case, absolutely`},
     {image: 13, char: `ray`, yap: `it's every protogen's favourite treat - a RAMburger! too bad it's really expensive nowadays...`},
     {image: 14, char: `ray`, yap: `ray can change his ear display to show his status. he mostly uses it to indicate when he's resting`},
-    {image: 15, char: `ray`, yap: `this guy is too shy for his own good and hesitates on every social encounter`},
+    {image: 15, char: `ray`, yap: `this fluffy guy is too shy for his own good and hesitates on every social encounter`},
     {image: 16, char: `ray`, yap: `we don't know if he's really that stupid or if its his processors lagging behind. probably both`},
     {image: 17, char: `ray`, yap: `ray grows a lot of fur in colder seasons and turns into a living plushie every six months
                                     <br>... and also an walking ad for vaccuums due to how much he sheds`},
@@ -65,7 +65,7 @@ var loreData = [
     {image: 20, char: `ray`, yap: `his ear vent fin can rotate and it sometimes acts like a second pair of ears`},
     {image: 21, char: `ray`, yap: `he's not a full-on mechanical protogen, and has biological parts!`},
     {image: 22, char: `ray`, yap: `ray's limbs are detachable!`}, /* gif */
-    {image: 23, char: `ray`, yap: `ray used to have a wifi icon as his symbol! it has now since changed into a comet`},
+    {image: 23, char: `ray`, yap: `ray can switch his fin icons! usually he uses the battery to indicate his, well, battery, a wifi icon because why not, or a comet`},
 
         /* regret */
     {image: 24, char: ``, yap: ` `},

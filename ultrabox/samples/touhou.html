@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,17 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>UB:SR - Touhou Series</title>
-    <meta name="description" content="a sample dump/repository made for beepbox's fork, ultrabox! current page: touhou">
+    <title>UB:SR - Touhou</title>
+    <meta name="description" content="a sample dump/repository made for beepbox's fork(s) with custom sample loading! current page: Touhou">
     <meta name="author" content="kommit">
     <link href="/ultrabox/ico-ultrabox.png" rel="icon" type="image/x-icon">
-    <link href="samples-page.css" rel="stylesheet">
+    <link href="/ultrabox/assets/samples-page.css" rel="stylesheet">
 
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <script src="/ultrabox/pauseAudio.js"></script>
     <script src="/ultrabox/copylink.js"></script>
     <script src="/ultrabox/pmo.js"></script>
+    <script src="/ultrabox/assets/samplessheet.js"></script>
 </head>
 
 <main id="testsidebar" class="sidebar"></main>
@@ -24,28 +23,23 @@
 <body>
     <div class="content">
         <header class="texttext" id="top">
-            <h1>Touhou Series</h1>
+            <h1>Touhou</h1>
             <p class="whitespacething">
-                work in progress!
-                <a href="" title="sample showcase">
-                    no demo thing yet :(
-                </a>
+                
+                <h3><a class="linkswoa" href=""
+                    title="sample showcase">category demo || made by 
+                </a></h3>
             </p>
         </header>
 
-        <div class="stupidfuckingcontainer">
-
+        <div class="stupidfuckingcontainer" id="sampleentries">
+            <span>loading, please wait...</span>
+            <progress id="progress-bar" aria-label="content loading..."></progress>
         </div>
 
-        <footer>
-            <p class="small">
-                if you've found this helpful, consider sharing the link to others :D thank you for using it!
-                <br><br><br>
-            </p>
-        </footer>
+        <footer> <br><br> <a href="#">back to top</a> <br><br><br> </footer>
     </div>
-    <!-- made using my own python script :D -->
+    <!-- this page was generated using my python script -->
 </body>
 
 </html>
-            

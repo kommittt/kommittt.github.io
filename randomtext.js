@@ -847,6 +847,19 @@ var messages = [
     `also on github pages!`,
     `my balls itch`,
     `<span class="determination">Find her.</span>`,
+    `i am not intelligent. do not mistake me as such`,
+    `<span class="determination">So, tell me Kris... The words... I've been wanting to hear.</span>`,
+    `at the bottom of the lake`,
+    `tell me to grow wings`,
+    `insert chapter 7 side b`,
+    `i met john homosexual. hes a chill guy`,
+    `i met jane lesbian. hes a chill gal`,
+    `i met The Creature`,
+    `no wormies`,
+    `Kris... You really did change!`,
+    `Proceed.`,
+    `<span class="determination">This is it. You only need to see her once. And then you'll move on.</span>`,
+    `trans rights!`,
     `back on the grind`
 ];
 var noMoreManualEditing = messages.length;

@@ -12,11 +12,11 @@ html{
     background-image: url('bg.svg');
     background-attachment: fixed;
     background-position: center;
-    scrollbar-color: #303c2f #262626;   
+    scrollbar-color: #2d5131 #0a1c0c;   
 }
 
 h1{
-    background:#5b9061;
+    background:#2d5131;
     padding: 20px 10px 20px 10px;
     border: none;
     border-radius: 10px;
@@ -30,6 +30,11 @@ h2{
     max-width: 70%;
 }
 
+.coolumn{
+    margin-top: 15px;
+    display: block;
+    flex-basis: calc(45% - 1px);
+}
 
 .boxa {
     display: flex;
@@ -44,13 +49,33 @@ h2{
     max-width: 200px;
     border-radius: 50%;
     margin-bottom: 15px;
+    
+    border: 5px solid #29e29b00; /* heh */
+    transition: all 0.2s ease-in-out;
+}
+.boxa img:hover {
+    border: 5px solid #29e29c;
+    border-radius: 50%;
 }
 
-table {
-    width: 100%;
+.smallboxa {
+    font-size: small;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 100px;
+    flex: 1 1 300px;
 }
-th {
-    padding: 8px;
+.smallboxa img {
+    width: 100%;
+    max-width: 100px;
+    border-radius: 50%;
+}
+
+.queuestuff {
+    font-size: small;
+    margin: 0;
 }
 
 .texttext{
@@ -70,12 +95,12 @@ th {
     height: 97%;
     overflow: auto;
     top: auto;
-    border: #5b9061;
+    border: #2d5131;
     border-style: solid;
     border-radius: 10px;
 }
 .sidebar h3 {
-    background:#5b9061;
+    background:#2d5131;
     padding: 4%;
     margin: 2%;
     margin-bottom: 12px;
@@ -92,7 +117,7 @@ th {
 }
 .sidebar a.workinprogress {
     margin: 2%;
-    color: #5b9061;
+    color: #2d5131;
     text-decoration: line-through;
 }
 .sidebar a.workinprogress:hover:not(.active){
@@ -110,7 +135,7 @@ th {
 }
 .sidebar a:hover:not(.active) {
     margin: 2%;
-    background-color: #5b9061;
+    background-color: #2d5131;
     color: white;
     border-radius: 10px;
 }
@@ -151,12 +176,13 @@ div.content {
 .linkswoa a {
     text-align: center;
     padding: 0.8rem;
-    background-color: #5b9061;
+    background-color: #2d5131;
     border-radius: 10px;
     color: #ffffff;
 }
 
 .contactthing{
+    padding: 5px;
     text-decoration: none;
     color: #29e29c;
 }
@@ -169,7 +195,7 @@ div.content {
 /* ZE NAVI!!!!!!!!!!!!!!!!!! */
 .buttonnavi{
     font-family:'Ubuntu', 'Calibri', sans-serif;
-    background-color: #5b9061;
+    background-color: #2d5131;
     padding: 5px 17px 5px 17px;
     color: #ffffff;
     margin-left: 10% auto;
@@ -193,10 +219,10 @@ div.content {
 
 /* links */
 a{
-    color: #448846;
+    color: #29e29c;
 }
 a:hover{
-    color: #26de48;
+    color: #8affd2;
 }
 
 /* text styles and stuff */
@@ -210,9 +236,8 @@ a:hover{
     font-size: small;
 }
 
-.small{
-    color: #5b9061;
-    font-size: small;
+small{
+    opacity: 0.6;
 }
 
 .link{
@@ -226,11 +251,11 @@ a:hover{
 summary{
     font-weight: bold;
     color: #ffffff;
-    color: #448846;
+    color: #29e29c;
     cursor: pointer;
 }
 summary:hover{
-    color: #26de48;
+    color: #8affd2;
 }
 /* text styles and stuff */
 
@@ -255,7 +280,7 @@ summary:hover{
 }
 .category a{
     padding: 20px;
-    border: 4px solid #5b9061;
+    border: 4px solid #2d5131;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -270,40 +295,50 @@ summary:hover{
     cursor: pointer;
     text-decoration: none;
 }
-.category a:hover .small{
-    color: #5b9061;
+.category a:hover small{
+    color: #2d5131;
 }
 .category .bigguy{
     font-size: x-large;
     color: #448846;
 }
 .category a:hover{
-    background-color: #5b9061;
+    background-color: #2d5131;
 }
 .category a:hover .bigguy{
     color: #26de48;
     font-weight: bold;
 }
 @media (max-width: 768px) {
-    .category{
+    p, .coolumn, .linkswoa, .navilinks, nav {
+        font-size: 12px;
+    }
+    h1 {
+        font-size: 18px;
+    }
+    .category a{
+        padding: 10px;
+        gap: 5px;
+        height: 100px;
+        max-height: 100px;
+        font-size: 12px;
+        color: #ffffff;
+    }
+    .category, .coolumn{
         flex-basis: 100%;
     }
 }
-/* column view */
 
-.temporary{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 95vh;
-    text-align: center;
-}
 
-.temporary p{
-    padding: 25px;
-    border: #5b9061;
-    border-style: dotted;
-    border-radius: 10px;
+/* Style the search box inside the navigation bar
+https://www.w3schools.com/howto/howto_css_searchbar.asp */
+.searchthing {
+    background-color: #00000000;
+    border: 2px solid #448846;
+    border-radius: 5px;
+    font-family: 'Ubuntu', 'Calibri', sans-serif;
+    color: #ffffff;
 
-    white-space: pre-line;
+    padding: 6px;
+    font-size: 12px;
 }

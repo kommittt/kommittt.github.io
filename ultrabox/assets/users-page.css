@@ -1,0 +1,311 @@
+@charset "UTF-8";
+
+html {
+    font-family: 'Ubuntu', 'Calibri', sans-serif;
+    text-align: center;
+    color: #ffffff;
+    background: #1b1313;
+    background-image: url('usersubmitted.svg');
+    background-attachment: fixed;
+    background-position: center;
+    scrollbar-color: #572e2e #1d0e0e;
+}
+
+/* 572e2e 302331 */
+h1 {
+    background: #572e2e;
+    padding: 20px 10px 20px 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+.texttext {
+    margin: 1% auto;
+    padding: 2%;
+    max-width: 70%;
+}
+
+
+h2 {
+    padding: 20px 10px 20px 10px;
+    border: none;
+    border-radius: 10px;
+    padding: 2%;
+    margin: 1% auto;
+    max-width: 70%;
+}
+
+.texttext .whitespacething {
+    white-space: pre-line;
+}
+
+.floatingwin {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    cursor: move;
+}
+
+/* new shit */
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 250px;
+    background: #1b1313;
+    background-attachment: fixed;
+    position: fixed;
+    height: 97%;
+    overflow: auto;
+    top: auto;
+    border: #572e2e;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+.sidebar h3 {
+    background: #572e2e;
+    padding: 4%;
+    margin: 2%;
+    margin-bottom: 12px;
+    border: none;
+    border-radius: 10px;
+}
+
+.sidebar a {
+    display: block;
+    color: #a78d8d;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 10px;
+    margin: 2%;
+}
+
+.sidebar a.workinprogress {
+    margin: 2%;
+    color: #444444;
+    text-decoration: line-through;
+}
+
+.sidebar a.workinprogress:hover:not(.active) {
+    background: #ff000000;
+    color: #ffffff;
+}
+
+.sidebar a.active {
+    margin: 2%;
+    background: #572e2e;
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+.sidebar a.active:hover {
+    background-color: #a35c5c
+}
+
+.sidebar a:hover:not(.active) {
+    margin: 2%;
+    background-color: #572e2e8d;
+    color: white;
+    border-radius: 10px;
+}
+
+div.content {
+    margin-left: 250px;
+    padding: 1px 16px;
+    height: 1000px;
+}
+
+/* links */
+a {
+    color: #ff4c4c;
+}
+
+a:hover {
+    color: #a6beff;
+}
+
+/* links */
+
+
+
+/* text styles and stuff */
+.col {
+    color: #ff8181;
+}
+
+small {
+    color: #444444;
+    font-size: small;
+}
+
+.link {
+    color: #afafaf;
+    font-size: small;
+}
+
+.link:hover {
+    color: #7d71ff;
+    cursor: pointer;
+}
+
+/* text styles and stuff */
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* i love you so much w3 schools */
+
+/* column view */
+.stupidfuckingcontainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+.audiofile {
+    display: flex;
+    flex-direction: column;
+    font-size: large;
+    padding: 20px;
+    border: 4px solid #572e2e;
+    background-color: #1d0e0e;
+    border-radius: 10px;
+    gap: 10px;
+}
+
+.tags {
+    font-family: monospace;
+    font-size: small;
+
+    opacity: 0.5;
+    color: #ffffff;
+}
+.submitter {
+    font-size: small;
+    opacity: 0.5;
+    color: #ffffff;
+}
+
+.audiofile button{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 7px 0;
+    font-size: x-large;
+}
+.buttcontain {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    width: 100%;
+    height: 140%;
+    margin: 0;
+}
+.audioplay {
+    background-color: #299d48;
+    border: 0px;
+    border-radius: 5px;
+    color: #ffffff;
+}
+.audiostop {
+    background-color: #9d2929;
+    border: 0px;
+    border-radius: 5px;
+    color: #ffffff;
+}
+.audiocopy {
+    background-color: #292b9d;
+    border: 0px;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: x-small;
+    font-family: monospace;
+}
+button:hover {
+    filter: brightness(150%);
+    cursor: pointer;
+}
+
+.dih {
+    text-align: left;
+}
+label b {
+    font-size: large;
+    padding: 5px;
+}
+input, textarea {
+    padding: 5px;
+    border: 2px solid #572e2e;
+    background-color: #1d0e0e;
+    color: #ffffff;
+    font-family: monospace;
+}
+.form-button:hover {
+    filter: brightness(150%);
+    cursor: pointer;
+}
+
+/* Style the search box inside the navigation bar
+https://www.w3schools.com/howto/howto_css_searchbar.asp */
+.searchthing {
+    background-color: #00000000;
+    border: 2px solid #572e2e;
+    width: 50%;
+    border-radius: 5px;
+    font-family: 'Ubuntu', 'Calibri', sans-serif;
+    color: #ffffff;
+
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+@media screen and (max-width: 800px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        font-size: small;
+        margin-bottom: 10px;
+    }
+
+    .sidebar a {
+        float: left;
+    }
+
+    div.content {
+        margin-left: 0;
+    }
+    .stupidfuckingcontainer {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .sidebar a {
+        text-align: center;
+        float: none;
+    }
+}

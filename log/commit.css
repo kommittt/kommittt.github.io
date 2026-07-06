@@ -12,6 +12,11 @@ html{
     overflow-x: hidden;
 }
 
+body {
+    background-color: #000000;
+    /* sorry for the flashbang chromium users, i am too lazy to fix it. this is my attempt that did not work. switch to firefox LMAO */
+}
+
 main {
     margin-left: 25px;
     margin-right: 25px;
@@ -51,6 +56,7 @@ main {
 }
 
 .fade-in {
+    background-color: #000000;
 	opacity: 1;
 	animation-name: fadeInOpacity;
 	animation-iteration-count: 1;

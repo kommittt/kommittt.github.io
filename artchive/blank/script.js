@@ -1,24 +1,22 @@
-let audio = null; // something about it being global??? why is it null tho
-
+let audio = null; 
 function playSound(src) {
 
   if (!audio || audio.src !== location.href + src) {
-    // !audio = if theres no audio
-    // something about browser stuff
 
     if (audio) {
-      audio.pause(); // stop already playing songs or something
+      audio.pause();
     }
 
-    audio = new Audio(src); // makes new audio instance
-    audio.volume = 0.3; // self explanatory
+    audio = new Audio(src);
+    audio.volume = 0.3;
   }
 
-  if (!audio.paused) { // if audio ISNT paused/already playing, 
-    audio.currentTime = 0; // set time back to 0
+  if (!audio.paused) {
+    audio.currentTime = 0;
   }
 
-  audio.play(); // if all those conditions arent met then play (most likely first instance)
+  audio.play();
 }
 
-// every time i take a break from coding i forget every single thing ive learned before
+// wanted to put a randomiser here like the splash texts, but im too lazy again...
+

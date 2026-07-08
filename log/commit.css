@@ -110,7 +110,7 @@ details{
     padding-left: 20px;
     margin-bottom: 20px;
 }
-details .small{
+details small{
     font-size: small;
 }
 
@@ -137,14 +137,14 @@ summary:hover{
     color: #8b8cacb3;
     white-space: pre-line;
 }
-.pastlog .small{
+.pastlog small{
     font-size: small;
     color: #8b8cacb3;
 }
 .crttvreal .pastlog{
     text-shadow: 0 0 10px #8b8cac66;
 }
-.crttvreal .pastlog .small{
+.crttvreal .pastlog small{
     text-shadow: 0 0 10px #8b8cac66;
 }
 
@@ -153,7 +153,7 @@ summary:hover{
     display: block;
     padding-left: 20px;
 }
-.current .small{
+.current small{
     font-size: small
 }
 

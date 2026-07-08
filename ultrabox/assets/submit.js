@@ -25,7 +25,8 @@ function normalizeURL(url) {
     return url;
 }
 
-const alloedhosters = ["https://file.garden/", "https://dl.dropboxusercontent.com/"];
+const alloedhosters = ["https://file.garden/"];
+/* raw.githubusercontent.com */
 
 function fetchSampleEntries() {
     fetch(`https://opensheet.elk.sh/${GOOGLE_SHEET_ID}/${GOOGLE_SHEET_NAME}`)
@@ -98,7 +99,7 @@ function validate_text() {
     let allValid = links.every(link => alloedhosters.some(prefix => link.startsWith(prefix)));
 
     if (links.length === 0 || !allValid) {
-        alert("your submission does not include an accepted link!\nit only currently allows from filegarden and dl.dropboxusercontent.com. please also include the https:// prefix!!\n\nexample:\nhttps://file.garden/\nhttps://dl.dropboxusercontent.com/\n\n(ill fix it sometime...)");
+        alert("your submission does not include an accepted link!\nit only currently allows from file.garden. please also include the https:// prefix!!\n\nexample:\nhttps://file.garden/\n\n(ill fix it sometime...)");
         return;
     }
     else {

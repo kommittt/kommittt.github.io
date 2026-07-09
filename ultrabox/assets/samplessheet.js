@@ -8,10 +8,10 @@ function getTheCat() {
 const alltheCats = [
     "generic-sounds", "sgm", "breaks", "undertale", "deltarune", "earthbound", "genesisf2", 
     "mother-3", "pizza-tower", "ultrakill", "mario64", "super-mario-world", "super-mario-maker-2",
-    "banjo-kazooie", "baldi", "roblox2009", "aceattorney1", "pvz", "minecraft", "msm",
-    "megaman-x", "megaman-zero", "user-submitted", "plok", "real_cd", "etcomposer", 
+    "banjo-kazooie", "baldi", "roblox2009", "aceattorney1", "pvz", "minecraft", "mario-kart-ds",
+    "megaman-x", "megaman-zero", "user-submitted", "plok", "real_cd", "etcomposer", "msm",
     /* 
-    "touhou", "mario-kart-ds", "kirby-super-star", "megaman-zx", "megaman-zxa",
+    "touhou",  "kirby-super-star", "megaman-zx", "megaman-zxa",
      "pokemonbnw", "sprunki",
     */
     "work-in-progress"
@@ -29,6 +29,7 @@ function renderEntries(nosortingfuckyou, container) {
         const sheetmultiplesamples = nosortingfuckyou[i].multiple || "";
 
         const div = document.createElement("div");
+        div.id = "hi";
 
         if (sheettitle === "" && sheetlink === "") {
             div.innerHTML = `
@@ -44,10 +45,8 @@ function renderEntries(nosortingfuckyou, container) {
             if (sheetcredit === "") {
                 div.innerHTML = `
                     <div class="audiofile" data-src="${sheetlink}" data-preview="${sheetmultiplesamples || sheetlink}">
-                        ${sheettitle}
-
-                        <span class="tags" title="tags">${sheettags}</span>
-
+                        ${sheettitle}<br>
+                        <span class="tags" title="tags" id="searchtags">${sheettags}</span>
                         <div class="buttcontain">
                             <button onclick="playsample(this)" class="audioplay">▶</button>
                             <button class="audiocopy" onclick="copy(this)">copy</button>
@@ -57,10 +56,9 @@ function renderEntries(nosortingfuckyou, container) {
             } else {
                 div.innerHTML = `
                     <div class="audiofile" data-src="${sheetlink}" data-preview="${sheetmultiplesamples || sheetlink}">
-                        ${sheettitle}
+                        ${sheettitle}<br>
                         <span class="submitter">submitted by: ${sheetcredit}</span>
-                        <span class="tags" title="tags">${sheettags}</span>
-
+                        <span class="tags" title="tags" id="searchtags">${sheettags}</span>
                         <div class="buttcontain">
                             <button onclick="playsample(this)" class="audioplay">▶</button>
                             <button class="audiocopy" onclick="copy(this)">copy</button>

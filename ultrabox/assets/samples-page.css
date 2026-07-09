@@ -202,6 +202,30 @@ button:hover {
     cursor: pointer;
 }
 
+/* Style the search box inside the navigation bar
+https://www.w3schools.com/howto/howto_css_searchbar.asp */
+.searchthing {
+    background-color: #272331;
+    border: 2px solid #49495f;
+    width: 30%;
+    border-radius: 5px;
+    font-family: 'Ubuntu', 'Calibri', sans-serif;
+    color: #ffffff;
+
+    padding: 10px;
+    margin-bottom: 15px;
+}
+.searchbutton {
+    background-color: #272331;
+    border: 2px solid #49495f;
+    border-radius: 5px;
+    font-family: 'Ubuntu', 'Calibri', sans-serif;
+    color: #ffffff;
+
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
 @media screen and (max-width: 800px) {
     .sidebar {
         width: 100%;

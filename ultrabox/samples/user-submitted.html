@@ -17,6 +17,7 @@
     <script src="/ultrabox/copylink.js"></script>
     <script src="/ultrabox/pmo.js"></script>
     <script src="/ultrabox/assets/submit.js"></script>
+    <script src="/ultrabox/assets/searchbar.js"></script>
 </head>
 
 <main id="testsidebar" class="sidebar"></main>
@@ -67,9 +68,10 @@ https://file.garden/" style="width: 100%; margin-bottom: 10px;"></textarea> <!--
             <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
         </header>
 
-        <!--
-        <input class="searchthing" type="text" placeholder="search samples..." font-size: 12px; oninput="searchSamples()">
-        -->
+        <input type="search" class="searchthing" style="font-size: 12px;" name="q"
+            placeholder="type here & press enter to search..." aria-label="looking for something specific?"
+            onkeydown="if(event.key === 'Enter') searchSamples(event)"/>
+
         <div class="stupidfuckingcontainer" id="sampleshtml">
             <span>loading, please wait...</span>
             <progress id="progress-bar" aria-label="Content loading…"></progress>

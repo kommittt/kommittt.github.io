@@ -54,27 +54,31 @@ function fetchSampleEntries() {
 
             if (saniPreview === "") {
                 sampleshtml.innerHTML += `
-                <div class="audiofile" data-src="${saniLink}" data-preview="${multipleSamples || saniLink}">
-                    ${saniTitle}
-                    <span class="submitter">submitted by: ${saniName}</span>
-                    <span class="tags" title="tags">${saniTags}</span>
+                <div id="hi">
+                    <div class="audiofile" data-src="${saniLink}" data-preview="${multipleSamples || saniLink}">
+                        ${saniTitle}
+                        <span class="submitter">submitted by: ${saniName}</span>
+                        <span class="tags" title="tags">${saniTags}</span>
 
-                    <div class="buttcontain">
-                        <button onclick="playsample(this)" class="audioplay">▶</button>
-                        <button class="audiocopy" onclick="copy(this)">copy</button>
+                        <div class="buttcontain">
+                            <button onclick="playsample(this)" class="audioplay">▶</button>
+                            <button class="audiocopy" onclick="copy(this)">copy</button>
+                        </div>
                     </div>
                 </div>`;
             }
             else {
                 sampleshtml.innerHTML += `
-                <div class="audiofile" data-src="${saniLink}" data-preview="${multipleSamples || saniLink}">
-                    ${saniTitle}
-                    <span class="submitter">submitted by: ${saniName}, <a href="${saniPreview}">preview</a></span>
-                    <span class="tags" title="tags">${saniTags}</span>
+                <div id="hi">
+                    <div class="audiofile" data-src="${saniLink}" data-preview="${multipleSamples || saniLink}">
+                        ${saniTitle}
+                        <span class="submitter">submitted by: ${saniName}, <a href="${saniPreview}">preview</a></span>
+                        <span class="tags" title="tags">${saniTags}</span>
 
-                    <div class="buttcontain">
-                        <button onclick="playsample(this)" class="audioplay">▶</button>
-                        <button class="audiocopy" onclick="copy(this)">copy</button>
+                        <div class="buttcontain">
+                            <button onclick="playsample(this)" class="audioplay">▶</button>
+                            <button class="audiocopy" onclick="copy(this)">copy</button>
+                        </div>
                     </div>
                 </div>`;
             }

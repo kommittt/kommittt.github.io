@@ -16,6 +16,7 @@
     <script src="/ultrabox/copylink.js"></script>
     <script src="/ultrabox/pmo.js"></script>
     <script src="/ultrabox/assets/samplessheet.js"></script>
+    <script src="/ultrabox/assets/searchbar.js"></script>
 </head>
 
 <main id="testsidebar" class="sidebar"></main>
@@ -25,12 +26,12 @@
         <header class="texttext" id="top">
             <h1>Touhou</h1>
             <p class="whitespacething">
-                
-                <h3><a class="linkswoa" href=""
-                    title="sample showcase">category demo || made by 
-                </a></h3>
             </p>
         </header>
+
+        <input type="search" class="searchthing" style="font-size: 12px;" name="q"
+            placeholder="type here & press enter to search..." aria-label="looking for something specific?"
+            onkeydown="if(event.key === 'Enter') searchSamples(event)"/>
 
         <div class="stupidfuckingcontainer" id="sampleentries">
             <span>loading, please wait...</span>

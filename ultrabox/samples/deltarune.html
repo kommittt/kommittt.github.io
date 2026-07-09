@@ -16,6 +16,7 @@
     <script src="/ultrabox/copylink.js"></script>
     <script src="/ultrabox/pmo.js"></script>
     <script src="/ultrabox/assets/samplessheet.js"></script>
+    <script src="/ultrabox/assets/searchbar.js"></script>
 </head>
 
 <main id="testsidebar" class="sidebar"></main>
@@ -35,6 +36,10 @@
             </p>
         </header>
 
+        <input type="search" class="searchthing" style="font-size: 12px;" name="q"
+            placeholder="type here & press enter to search..." aria-label="looking for something specific?"
+            onkeydown="if(event.key === 'Enter') searchSamples(event)"/>
+        
         <div class="stupidfuckingcontainer" id="sampleentries">
 
             <span>loading, please wait...</span>
